@@ -3,9 +3,10 @@
 
 @import './utils/variables';
 @import './utils/mixins';
+@import './utils/placeholders';
 
 @import './layout/header';
-@import "./layout/hero";
+@import './layout/hero';
 @import './layout/products';
 @import './layout/about';
 @import './layout/advantages';
