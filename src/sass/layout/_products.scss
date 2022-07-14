@@ -1,2 +1,95 @@
+.prodacts {
+  padding: 40px;
+}
 
+.prodacts__text {
+  @extend %box-text;
 
+  font-family: 'Titan One';
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.17;
+
+  text-align: center;
+
+  color: $label-title-color;
+}
+
+.prodacts__title {
+  @extend %box-text;
+
+  font-family: 'Titan One';
+
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 1.15px;
+  text-align: center;
+  letter-spacing: 0.04em;
+
+  color: $accent-color;
+}
+
+.product {
+  @extend %list;
+}
+
+.product-card__item {
+  padding: 20px;
+}
+
+.product-card__item--cream {
+  width: 280px;
+  height: 489px;
+
+  background: $bgc-product-1;
+  border-radius: 24px;
+}
+
+.product-card__item--coffee {
+  width: 280px;
+  height: 489px;
+
+  background: $bgc-product-2;
+  border-radius: 24px;
+}
+
+.product-card__item--milkshakes {
+  width: 280px;
+  height: 489px;
+
+  background: $bgc-product-3;
+  border-radius: 24px;
+}
+
+.product-card__title {
+  @extend %box-text;
+
+  font-family: 'Titan One';
+
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.15;
+
+  text-align: center;
+  letter-spacing: 0.04em;
+
+  color: $white-color;
+}
+
+.product-card__text {
+  font-family: 'DM Sans';
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1, 52;
+
+  text-align: center;
+  letter-spacing: 0.04em;
+
+  color: $bgc-body;
+}
+
+.button__product-card {
+  width: 40px;
+  height: 40px;
+}
