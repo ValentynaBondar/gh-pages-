@@ -1,5 +1,5 @@
 .prodacts {
-  padding: 40px;
+  padding: 60px 20px;
 }
 
 .prodacts__text {
@@ -9,8 +9,9 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 1.17;
-
   text-align: center;
+
+  margin: 0px 0px 15px;
 
   color: $label-title-color;
 }
@@ -22,10 +23,12 @@
 
   font-weight: 400;
   font-size: 34px;
-  line-height: 1.15px;
+  line-height: 1.15;
   text-align: center;
   letter-spacing: 0.04em;
 
+  margin: 0;
+  padding-bottom: 8px;
   color: $accent-color;
 }
 
@@ -34,10 +37,35 @@
 }
 
 .product-card__item {
-  padding: 20px;
+  position: relative;
+
+  text-align: center;
+
+  padding: 160px 40px 40px;
+  margin: 140px auto 0;
 }
 
 .product-card__item--cream {
+  width: 280px;
+  height: 489px;
+
+  background: $bgc-product-2;
+  border-radius: 24px;
+}
+
+.product-card__item--cream::before {
+  content: '';
+  display: inline-blok;
+  position: absolute;
+  top: -140px;
+  left: 0;
+
+  width: 280px;
+  height: 280px;
+  background-image: url('../images/ice-cream@320_1x.png');
+}
+
+.product-card__item--coffee {
   width: 280px;
   height: 489px;
 
@@ -45,12 +73,16 @@
   border-radius: 24px;
 }
 
-.product-card__item--coffee {
-  width: 280px;
-  height: 489px;
+.product-card__item--coffee::before {
+  content: '';
+  display: inline-blok;
+  position: absolute;
+  top: -140px;
+  left: 0;
 
-  background: $bgc-product-2;
-  border-radius: 24px;
+  width: 280px;
+  height: 280px;
+  background-image: url('../images/coffee@320_1x.png');
 }
 
 .product-card__item--milkshakes {
@@ -59,6 +91,18 @@
 
   background: $bgc-product-3;
   border-radius: 24px;
+}
+
+.product-card__item--milkshakes::before {
+  content: '';
+  display: inline-blok;
+  position: absolute;
+  top: -140px;
+  left: 0;
+
+  width: 280px;
+  height: 280px;
+  background-image: url('../images/milkshakes@320_1x.png');
 }
 
 .product-card__title {
@@ -74,6 +118,8 @@
   letter-spacing: 0.04em;
 
   color: $white-color;
+
+  margin: 0px 0px 32px;
 }
 
 .product-card__text {
@@ -81,15 +127,29 @@
 
   font-weight: 700;
   font-size: 14px;
-  line-height: 1, 52;
+  line-height: 152%;
 
   text-align: center;
   letter-spacing: 0.04em;
 
   color: $bgc-body;
+
+  margin: 0px 0px 32px;
 }
 
 .button__product-card {
   width: 40px;
   height: 40px;
+
+  border-radius: 50%;
+  background-color: $bgc-body;
+  background-image: url('../images/inr-arrow-right.svg');
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  cursor: pointer;
+
+  margin-right: auto;
+  margin-left: auto;
 }
