@@ -1,9 +1,30 @@
 .contact{
     list-style: none;
     margin: 0 auto;
-    padding: 0 20px;
-    align-items: center;
+    padding: 0;
+    margin-bottom: 32px;
+    // align-items: center;
 }
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    -webkit-clip-path: inset(100%);
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.contact__section{
+    background: linear-gradient($bgc-body 10%, 20%, $bgc-body-pink);
+    padding-bottom: 40px;
+}
+
 .contact__card{
     background: $white-color;
     box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
@@ -20,6 +41,7 @@
 
 .contact__card--location{
     display: block;
+    margin-bottom: 24px;
 }
 
 .type{
@@ -62,4 +84,188 @@
 
 .description{
     margin: 0;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.5;
+    color: $secondary-color;
+
+    padding-bottom: 24px;
+    border-bottom: 1px solid $border-color;
+}
+
+.contact__card--shedule{
+    display: block;
+    margin-bottom: 24px;
+}
+
+.shedule{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 24px;
+    border-bottom: 1px solid $border-color;
+}
+
+.shedule__item{
+    margin-bottom: 8px;
+
+    &--day{
+        margin: 0;
+        padding: 0;
+        font-family: 'DM Sans';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 1.8333;
+        color: $primary-color;
+    }
+
+    &--time{
+        margin: 0;
+        padding: 0;
+        font-family: 'DM Sans';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 1.8333;
+        color: $label-title-color;
+    }
+
+    & + & {
+        margin-bottom: 0;
+    }
+}
+
+.contact__info{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    &--link{
+        text-decoration: none;
+        font-family: 'DM Sans';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 1.5;
+        color: $secondary-color;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        &:hover, &:focus{
+            color: $accent-color;
+        }
+    }
+}
+
+.button__section{
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+}
+
+.button__section--item{
+    margin-bottom: 10px;
+    &:last-child{
+        margin-bottom: 0;
+    }
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.3125;
+}
+
+.button__location{
+    width: 161px;
+    height: 44px;
+    border-radius: 22px;
+    background-color: $bgc-btn-primary;
+    color: $white-color;
+    border: none;
+    align-items: center;
+    text-align: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    &:hover, &:focus{
+        background-color: $label-title-color;
+        color: $accent-color;
+        .icon__location{
+            stroke: $accent-color;
+        }
+    }
+}
+
+.button__franchise{
+    width: 161px;
+    height: 44px;
+    border-radius: 22px;
+    background-color: $white-color;
+    color: $accent-color;
+    border: none;
+    margin: 0 auto;
+    align-items: center;
+    text-align: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+
+    &:hover,&:focus {
+        background-color: $accent-color;
+        color: $white-color;
+        .icon__franchise {
+            stroke: $white-color;
+        }
+    }
+}
+
+.icon__location {
+    stroke: $white-color;
+    transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon__franchise{
+    stroke: $accent-color;
+    transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.is-hidden{
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.no-scroll{
+    overflow: hidden;
+}
+
+.backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(0.9);
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    padding: 10px;
+    height: 70vh;
+    overflow: auto;
+    width: calc(100% - 40px);
+    background-color: $bgc-body;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
