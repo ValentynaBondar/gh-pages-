@@ -22,4 +22,215 @@
   }
 }
 
-/*Кольори*//*# sourceMappingURL=index.css.map */
+/*Кольори*/
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+ul, ol {
+  margin: 0;
+  padding-left: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  cursor: pointer;
+}
+
+.hero {
+  width: 100%;
+  height: 502px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #FFB8CA;
+  background-image: url();
+}
+
+.hero__title {
+  font-family: "Titan One";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 1.15;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  width: 218px;
+  height: 106px;
+  padding-top: 151px;
+}
+
+.hero__primary {
+  color: #D41443;
+  font-size: 48px;
+}
+
+.hero__button {
+  display: flex;
+  margin-top: 120px;
+}
+
+.hero__one {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 1.25;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF;
+  background: #D41443;
+  border-radius: 20px;
+  border: 0px solid transparent;
+  display: inline-block;
+  min-width: 62px;
+  height: 24px;
+  margin-right: 9px;
+}
+
+.hero__two {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 1.25;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #D41443;
+  background: #FFFFFF;
+  border-radius: 20px;
+  border: 0px solid transparent;
+  min-width: 83px;
+  height: 24px;
+  padding-left: 15px;
+}
+
+.hero__paragraph {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.43;
+  color: #FFFFFF;
+}
+@media screen and (max-width: 767px) {
+  .hero__paragraph {
+    display: none;
+  }
+}
+
+.hero__item {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.29;
+  text-align: right;
+  color: #FFFFFF;
+}
+@media screen and (max-width: 767px) {
+  .hero__item {
+    display: none;
+  }
+}
+
+.hero__class {
+  font-family: "Titan One";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 46px;
+  line-height: 1.15;
+  text-align: right;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #D41443;
+}
+
+.advantages {
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom: 60px;
+  background: #FFF5F6;
+}
+
+.advantages__box {
+  width: 100%;
+}
+
+.advantages__title {
+  color: #FFF5F6;
+  font-size: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.advantages__card::before {
+  display: block;
+  margin-bottom: 16px;
+  content: "";
+  height: 50px;
+  background-repeat: no-repeat;
+}
+.advantages__card--cow::before {
+  background-image: url("..//images/cow.png");
+}
+.advantages__card--аpple::before {
+  background-image: url("..//images/аpple.png");
+}
+.advantages__card--heart::before {
+  background-image: url("..//images/heart.png");
+}
+
+.advantages__item {
+  font-family: "Titan One" sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 1.14;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  color: #D41443;
+}
+@media screen and (min-width: 768px) {
+  .advantages__item {
+    font-size: 48px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .advantages__item {
+    font-size: 58px;
+  }
+}
+
+.advantages__text {
+  font-family: "DM Sans" sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.7;
+  color: #000000;
+}
+@media screen and (min-width: 768px) {
+  .advantages__text {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .advantages__text {
+    font-size: 16px;
+  }
+}/*# sourceMappingURL=index.css.map */
