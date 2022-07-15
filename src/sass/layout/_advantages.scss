@@ -1,26 +1,70 @@
 .advantages {
-    width: 100%;
-    padding-top: 40px;
-    padding-bottom: 60px;
-    background: #FFF5F6;    
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom: 60px;
+  background: #fff5f6;
 }
 .advantages__box {
     width: 100%;
+
+    @media screen and (min-width: 768px) {
+       padding-left: 12px;        
+    }
+
+    @media screen and (min-width: 1200px) {
+        padding-left: -4px;        
+     }
 }
 .advantages__title {
     color: #FFF5F6;
     font-size: 0;
     margin: 0;
     padding: 0;
+    margin-bottom: 32px;
 }
+
+.advantages__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+
+    @media screen and (min-width: 768px) {
+        display: flex;        
+    }
+
+}
+
 .advantages__card {
+    max-width: 230px;       
+    margin-bottom: 32px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    @media screen and (min-width: 768px) {
+        max-width: 180px;
+        margin-bottom: 0;
+        margin-right: 4px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        max-width: 288px;
+        margin-bottom: 0;
+        margin-right: 115px;
+    }
 
     &::before {
         display: block;
         margin-bottom: 16px;
         content: "";
         height: 50px;
-        background-repeat: no-repeat;
+        background-repeat: no-repeat;        
     }
 
     &--cow::before {
@@ -37,7 +81,7 @@
 }
 
 .advantages__item {
-    font-family: 'Titan One' sans-serif;    
+    font-family: 'Titan One', sans-serif;    
     font-weight: 400;
     font-size: 36px;
     line-height: 1.14;
@@ -45,30 +89,32 @@
     text-transform: uppercase;
     margin-bottom: 4px;
 
-    color: #D41443;
+  color: #d41443;
 
-    @media screen and (min-width: 768px) {
-        font-size: 48px;
-    }
+  @media screen and (min-width: 768px) {
+    font-size: 48px;
+  }
 
-    @media screen and (min-width: 1200px) {
-        font-size: 58px;
-    }
+  @media screen and (min-width: 1200px) {
+    font-size: 58px;
+  }
 }
 
 .advantages__text {
-    font-family: 'DM Sans' sans-serif;    
+
+    font-family: 'DM Sans', sans-serif;    
     font-weight: 700;
     font-size: 12px;
     line-height: 1.7;
 
-    color: #000000;
 
-    @media screen and (min-width: 768px) {
-        font-size: 14px;
-    }
+  color: #000000;
 
-    @media screen and (min-width: 1200px) {
-        font-size: 16px;
-    }
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 16px;
+  }
 }
