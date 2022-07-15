@@ -1,13 +1,18 @@
-.containet {
-    width: 100%;
-    margin: 0 auto;
-    padding-left: 15px;
-    padding-right: 15px;
-}
+// .containet {
+//     width: 100%;
+//     margin: 0 auto;
+//     padding-left: 15px;
+//     padding-right: 15px;
+// }
 .about {
     background-color: $bgc-body-pink;
     padding-top: 60px;
-     position: relative;
+    padding-bottom: 40px;
+    position: relative;
+
+    @media screen and (min-width: 320px) {
+        width: 320px;
+    }
 }
 .about__toptext {
     margin: 0px 0px 15px 0px;
@@ -39,7 +44,8 @@
     text-transform: uppercase;
 }
 .about__image-top {
-    width: 280px;
+    margin-bottom: 40px;
+    width: 100%;
     height: 279px;
     display: block;
     justify-content: center;
@@ -59,26 +65,22 @@
     line-height: 1.58;
 }
 .about__image {
-    max-width: 100%;
+    width: 280px;
     height: 133px;
     position: absolute;
-    left: 20px;
+    z-index: 0;
 }
 .about__text {
+    margin-bottom: 20px;
     color: $secondary-color;    
     width: 220px;
-    height: 181px;
-    left: 20px;
-    top: 3231px;
+    height: 100%;
 
     font-family: 'DM Sans';
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
     line-height: 1.58;
-}
-.about__btn {
-background-color: $white-color;
 }
 .about__btn {
     background-color: $white-color;
@@ -95,7 +97,19 @@ background-color: $white-color;
     font-weight: 700;
     font-size: 14px;
     line-height: 18px;
-    // display: flex;
+    display: flex;
     align-items: center;
     text-align: center;
+    margin: 0 auto;
+    cursor: pointer;
+
+    &__bth:hover,
+    &__bth:focus {
+        background-color: $accent-color;
+    }
 }
+.about__btn-svg {
+    width: 5px;
+    height: 8px; 
+}
+
