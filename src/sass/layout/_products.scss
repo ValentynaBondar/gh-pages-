@@ -1,5 +1,5 @@
 .prodacts {
-  padding: 60px 20px;
+  padding: 60px 0;
 
   &__text {
     @extend %box-text;
@@ -171,7 +171,9 @@
   }
 }
 
-.button__product-card {
+.button-product {
+  position: relative;
+
   width: 40px;
   height: 40px;
 
@@ -179,13 +181,29 @@
   border: 0;
 
   background-color: $bgc-body;
-  background-image: url('../images/inr-arrow-right.svg');
-  background-size: 15px;
-  background-repeat: no-repeat;
-  background-position: center;
+  color: $accent-color;
 
   cursor: pointer;
 
   margin-right: auto;
   margin-left: auto;
+  padding: 0;
+  transition: color 250ms linear, background-color 250ms linear;
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+
+    fill: currentColor;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $secondary-color;
+    color: $bgc-body;
+  }
 }
