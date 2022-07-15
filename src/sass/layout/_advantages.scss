@@ -1,8 +1,8 @@
 .advantages {
-    width: 100%;
-    padding-top: 40px;
-    padding-bottom: 60px;
-    background: #FFF5F6;    
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom: 60px;
+  background: #fff5f6;
 }
 .advantages__box {
     width: 100%;
@@ -32,6 +32,7 @@
     @media screen and (min-width: 768px) {
         display: flex;        
     }
+
 }
 
 .advantages__card {
@@ -88,30 +89,32 @@
     text-transform: uppercase;
     margin-bottom: 4px;
 
-    color: #D41443;
+  color: #d41443;
 
-    @media screen and (min-width: 768px) {
-        font-size: 48px;
-    }
+  @media screen and (min-width: 768px) {
+    font-size: 48px;
+  }
 
-    @media screen and (min-width: 1200px) {
-        font-size: 58px;
-    }
+  @media screen and (min-width: 1200px) {
+    font-size: 58px;
+  }
 }
 
 .advantages__text {
+
     font-family: 'DM Sans', sans-serif;    
     font-weight: 700;
     font-size: 12px;
     line-height: 1.7;
 
-    color: #000000;
 
-    @media screen and (min-width: 768px) {
-        font-size: 14px;
-    }
+  color: #000000;
 
-    @media screen and (min-width: 1200px) {
-        font-size: 16px;
-    }
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 16px;
+  }
 }
