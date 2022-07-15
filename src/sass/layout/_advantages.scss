@@ -1,22 +1,22 @@
 .advantages {
   width: 100%;
-  padding-top: 40px;
+  padding-top: 20px;
   padding-bottom: 60px;
-  background: #fff5f6;
+  background-color: $bgc-body-pink;
 }
 .advantages__box {
     width: 100%;
 
     @media screen and (min-width: 768px) {
-       padding-left: 12px;        
+       padding-left: 12px;
     }
 
     @media screen and (min-width: 1200px) {
-        padding-left: -4px;        
+        padding-left: -4px;
      }
 }
 .advantages__title {
-    color: #FFF5F6;
+    color: $bgc-body-pink;
     font-size: 0;
     margin: 0;
     padding: 0;
@@ -30,13 +30,13 @@
     cursor: pointer;
 
     @media screen and (min-width: 768px) {
-        display: flex;        
+        display: flex;
     }
 
 }
 
 .advantages__card {
-    max-width: 230px;       
+    max-width: 230px;
     margin-bottom: 32px;
 
     &:last-child {
@@ -64,24 +64,51 @@
         margin-bottom: 16px;
         content: "";
         height: 50px;
-        background-repeat: no-repeat;        
+        background-repeat: no-repeat;
     }
 
     &--cow::before {
-        background-image: url('..//images/cow.png');
+        background-image: url('..//images/cow1x.png');
     }
 
     &--аpple::before {
-        background-image: url('..//images/аpple.png');
+        background-image: url('..//images/аpple1x.png');
     }
 
     &--heart::before {
-        background-image: url('..//images/heart.png');
-    }    
+        background-image: url('..//images/heart1x.png');
+    }
+}
+
+@media (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .advantages__card--cow::before {
+    background-image: url('..//images/cow2x.png');
+  }
+}
+
+@media (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .advantages__card--аpple::before {
+    background-image: url('..//images/аpple2x.png');
+  }
+}
+
+@media (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .advantages__card--heart::before {
+    background-image: url('..//images/heart2x.png');
+  }
 }
 
 .advantages__item {
-    font-family: 'Titan One', sans-serif;    
+    font-family: 'Titan One', sans-serif;
     font-weight: 400;
     font-size: 36px;
     line-height: 1.14;
@@ -89,10 +116,11 @@
     text-transform: uppercase;
     margin-bottom: 4px;
 
-  color: #d41443;
+  color: $accent-color;
 
   @media screen and (min-width: 768px) {
     font-size: 48px;
+    text-transform: none;
   }
 
   @media screen and (min-width: 1200px) {
@@ -102,13 +130,13 @@
 
 .advantages__text {
 
-    font-family: 'DM Sans', sans-serif;    
+    font-family: 'DM Sans', sans-serif;
     font-weight: 700;
     font-size: 12px;
     line-height: 1.7;
 
 
-  color: #000000;
+  color: $primary-color;
 
   @media screen and (min-width: 768px) {
     font-size: 14px;
