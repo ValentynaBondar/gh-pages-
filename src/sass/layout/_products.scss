@@ -53,6 +53,7 @@
 
 .product-card__item {
   position: relative;
+  box-sizing: border-box;
 
   width: 100%;
   max-width: 280px;
@@ -61,7 +62,9 @@
   text-align: center;
 
   padding: 160px 40px 40px;
-  margin: 140px auto 0;
+  margin: 140px auto;
+  // margin-left: 0;
+  // margin-right: 0;
 
   &::before {
     content: '';
@@ -170,7 +173,6 @@
     }
   }
 }
-
 .button-product {
   position: relative;
 
@@ -195,15 +197,13 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 20px;
-    height: 20px;
 
     fill: currentColor;
   }
 
   &:hover,
   &:focus {
-    background-color: $secondary-color;
+    background-color: $label-title-color;
     color: $bgc-body;
   }
 }
