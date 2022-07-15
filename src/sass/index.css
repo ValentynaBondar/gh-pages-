@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import '~node_modules/modern-normalize/modern-normalize.css';
+
 .container {
   width: 100%;
   margin: 0 auto;
@@ -23,6 +24,7 @@
 }
 
 /*Кольори*/
+
 .visually-hidden {
   position: absolute;
   white-space: nowrap;
@@ -168,4 +170,142 @@
   background-repeat: no-repeat;
   background-position: center;
   background-image: url("../images/reviews/home.svg");
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+ul, ol {
+  margin: 0;
+  padding-left: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  cursor: pointer;
+}
+
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .container {
+    width: 320px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
+
+
+
+
+/*Кольори*/
+=======
+
+
+
+
+
+
+
+.advantages {
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom: 60px;
+  background: #FFF5F6;
+}
+
+.advantages__box {
+  width: 100%;
+}
+
+.advantages__title {
+  color: #FFF5F6;
+  font-size: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.advantages__card::before {
+  display: block;
+  margin-bottom: 16px;
+  content: "";
+  height: 50px;
+  background-repeat: no-repeat;
+}
+.advantages__card--cow::before {
+  background-image: url("..//images/cow.png");
+}
+.advantages__card--аpple::before {
+  background-image: url("..//images/аpple.png");
+}
+.advantages__card--heart::before {
+  background-image: url("..//images/heart.png");
+}
+
+.advantages__item {
+  font-family: "Titan One" sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 1.14;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  color: #D41443;
+}
+@media screen and (min-width: 768px) {
+  .advantages__item {
+    font-size: 48px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .advantages__item {
+    font-size: 58px;
+  }
+}
+
+.advantages__text {
+  font-family: "DM Sans" sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.7;
+  color: #000000;
+}
+@media screen and (min-width: 768px) {
+  .advantages__text {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .advantages__text {
+    font-size: 16px;
+  }
+
+
 }/*# sourceMappingURL=index.css.map */
