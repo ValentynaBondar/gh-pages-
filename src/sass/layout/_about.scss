@@ -1,0 +1,115 @@
+// .containet {
+//     width: 100%;
+//     margin: 0 auto;
+//     padding-left: 15px;
+//     padding-right: 15px;
+// }
+.about {
+    background-color: $bgc-body-pink;
+    padding-top: 60px;
+    padding-bottom: 40px;
+    position: relative;
+
+    @media screen and (min-width: 320px) {
+        width: 320px;
+    }
+}
+.about__toptext {
+    margin: 0px 0px 15px 0px;
+    color: $label-title-color;
+    left: 58px;
+    top: 2649px;
+
+    font-family: 'Titan One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.16;
+    text-align: center;
+    text-transform: uppercase;
+}
+.about__title {
+    margin: 0px 0px 32px 0px;
+    color: $accent-color;
+    left: 56px;
+    top: 2685px;
+
+    font-family: 'Titan One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 1.14;
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+.about__image-top {
+    margin-bottom: 40px;
+    width: 100%;
+    height: 279px;
+    display: block;
+    justify-content: center;
+
+}
+.about__text-up {
+    margin: 0px 0px 40px 0px;
+    color: $primary-color;    
+    width: 220px;
+    height: 79px;
+    left: 20px;
+    top: 3112px;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.58;
+}
+.about__image {
+    width: 280px;
+    height: 133px;
+    position: absolute;
+    z-index: 0;
+}
+.about__text {
+    margin-bottom: 20px;
+    color: $secondary-color;    
+    width: 220px;
+    height: 100%;
+
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.58;
+}
+.about__btn {
+    background-color: $white-color;
+    border-radius: 22px;
+    border: none;
+    padding-left: 37px;
+    
+    width: 176px;
+    height: 44px;
+    color: $accent-color;
+
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    cursor: pointer;
+
+    &__bth:hover,
+    &__bth:focus {
+        background-color: $accent-color;
+    }
+}
+.about__btn-svg {
+    width: 5px;
+    height: 8px; 
+}
+
