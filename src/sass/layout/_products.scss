@@ -34,9 +34,6 @@
 
 .product-card {
   @extend %list;
-  padding: 0;
-  margin: 0;
-  list-style: none;
 
   &__text {
     font-family: 'DM Sans';
