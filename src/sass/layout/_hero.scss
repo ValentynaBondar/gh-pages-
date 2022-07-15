@@ -1,3 +1,13 @@
+
+.hero{
+    max-width: 100%;
+    height: 502px;
+    margin-left: auto;
+    margin-right: auto;
+
+    background: $bgc-product-2;
+
+
 .hero {
     width: 100%;
     height: 502px;
@@ -121,4 +131,5 @@ letter-spacing: 0.04em;
 text-transform: uppercase;
 
 color: $accent-color;
+
 }
