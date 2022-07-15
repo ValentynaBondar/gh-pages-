@@ -85,6 +85,13 @@
     content: '';
 
     background-image: url('../images/ice-cream@320_1x.png');
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      & {
+        background-image: url('../images/ice-cream@320_2x.png');
+      }
+    }
   }
 }
 
@@ -96,6 +103,13 @@
     content: '';
 
     background-image: url('../images/coffee@320_1x.png');
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      & {
+        background-image: url('../images/coffee@320_2x.png');
+      }
+    }
   }
 }
 
@@ -107,6 +121,13 @@
     content: '';
 
     background-image: url('../images/milkshakes@320_1x.png');
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      & {
+        background-image: url('../images/milkshakes@320_2x.png');
+      }
+    }
   }
 }
 
@@ -140,6 +161,13 @@
     width: 26px;
     height: 6px;
     background-image: url('../images/three_points_1x.png');
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      & {
+        background-image: url('../images/three_points_2x.png');
+      }
+    }
   }
 }
 
