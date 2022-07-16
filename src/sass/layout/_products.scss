@@ -171,6 +171,7 @@
     }
   }
 }
+
 .button-product {
   position: relative;
 
@@ -190,18 +191,30 @@
   padding: 0;
   transition: color 250ms linear, background-color 250ms linear;
 
-  &__icon {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    fill: currentColor;
-  }
-
-  &:hover,
-  &:focus {
+  &--cream:hover,
+  &--cream:focus {
     background-color: $label-title-color;
     color: $bgc-body;
   }
+
+  &--coffee:hover,
+  &--coffee:focus {
+    background-color: #ebbf8a;
+    color: $bgc-body;
+  }
+
+  &--milkshakes:hover,
+  &--milkshakes:focus {
+    background-color: #b1d285;
+    color: $bgc-body;
+  }
+}
+
+.button-product__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  fill: currentColor;
 }
