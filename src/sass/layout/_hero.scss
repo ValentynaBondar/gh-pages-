@@ -1,32 +1,44 @@
-
 .hero {
   width: 100%;
   height: 502px;
   margin-left: auto;
   margin-right: auto;
-  margin-right: 32px ;
   background: $bgc-hero;
+  overflow: hidden;
+  position: relative;
+ 
+  &::after{
+    content:'';
+    top:40%;
+    left: 50%;
+    z-index: 0;
+    width: 346px;
+    height: 346px;
+    border-radius: 50%;
+    position: absolute;
+    background: $label-title-color;
+    position: absolute;
+    transform: translate(-37%, -35%);
+   
+  }
+ 
 
-background-image: url(../images/hero_img1x.png),url(../images/mob_hero/Ellipse1x.png);
-background-repeat: no-repeat;
-background-position: bottom;
-background-position-x: 80%;
-
-
-
-
-
+.hero__ice{
+  img{
+    z-index: 1;
+    width: 171px;
+    display: block;
+    position: relative;
+   transform: translate(65%, -50%);
+   
+  }
 }
-
-
-
-
-
  
-
-
- 
-
+}
+.hero__container{
+  position: relative;
+  z-index: 3;
+}
 .hero__title{
  
 font-family: 'Titan One';
@@ -36,21 +48,21 @@ font-size: 26px;
 line-height: 1.15;
 letter-spacing: 0.04em;
 text-transform: uppercase;
-color: #ffffff;
+
+color: $white-color;
 width: 218px;
 height: 106px;
-padding-top: 152px;
-
-
-}
+padding-top: 151px;
+  }
+ 
 
 .hero__primary{
-  color:$accent-color;
-  font-size: 48px;
-}
+    color:$accent-color;
+    font-size: 48px;
+  }
 .hero__button{
-display: flex;
-margin-top: 120px;
+  display: flex;
+  margin-top: 120px;
 }
 .hero__one{
 font-family: 'DM Sans';
@@ -70,8 +82,12 @@ min-width: 62px;
 height: 24px;
 margin-right: 9px;
 }
+.hero__one:hover,
+.hero__one:focus{
+  background-color: #ECEBEB;
+}
 .hero__two{
-  font-family: 'DM Sans';
+    font-family: 'DM Sans';
 font-style: normal;
 font-weight: 400;
 font-size: 8px;
@@ -86,21 +102,27 @@ border: 0px solid transparent;
 min-width: 83px;
 height: 24px;
 padding-left: 15px;
+
 }
+.hero__two:hover,
+.hero__two:focus{
+  background-color: #ECEBEB;
+color: #d41443; }
 .hero__paragraph{
-  font-family: 'DM Sans';
+    font-family: 'DM Sans';
 font-style: normal;
 font-weight: 400;
 font-size: 14px;
 line-height: 1.43;
 color: $white-color;
 @media screen and (max-width: 767px) {
-  display: none;
+    display: none;
 }
- 
+   
 }
+
 .hero__item{
-  font-family: 'DM Sans';
+    font-family: 'DM Sans';
 font-style: normal;
 font-weight: 400;
 font-size: 14px;
@@ -108,15 +130,16 @@ line-height: 1.29;
 text-align: right;
 color: $white-color;
 @media screen and (max-width: 767px) {
-display: none;
+  display: none;
 }
 }
 .hero__class{
-  font-family: 'Titan One';
+    font-family: 'Titan One';
 font-style: normal;
 font-weight: 400;
 font-size: 46px;
 line-height: 1.15;
+
 text-align: right;
 letter-spacing: 0.04em;
 text-transform: uppercase;
