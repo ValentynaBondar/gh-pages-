@@ -53,20 +53,22 @@ footer {
   justify-content: center;
   align-items: center;
 
-  width: 33px;
-  height: 33px;
   border-radius: 50%;
-  // background-color:
+  background-color: $white-color;
 
-  &:hover,
-  &:focus {
-    background-color: rgba(212, 20, 67, 1);
+  & .footer_icon {
+    width: 32px;
+    height: 32px;
+    fill: $soc-icon;
+
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
-}
 
-.footer_icon {
-  width: 32px;
-  height: 32px;
+  &:hover .footer_icon,
+  &:focus .footer_icon {
+    fill: $accent-color;
+  }
 }
 
 .footer_li {
