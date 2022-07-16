@@ -49,20 +49,53 @@
 
     margin: 0px 0px 32px;
   }
+
+  &__title-price {
+    @extend %box-text;
+
+    font-family: 'Titan One';
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.15;
+    padding: 0px 0px 20px;
+
+    text-align: center;
+    letter-spacing: 0.1em;
+
+    color: $white-color;
+  }
+
+  &__item-price {
+    @extend %list;
+
+    font-family: 'DM Sans';
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 152%;
+
+    text-align: center;
+    letter-spacing: 0.04em;
+
+    color: $bgc-body;
+  }
 }
 
 .product-card__overlay {
   position: absolute;
+  z-index: 2;
   bottom: 100px;
   left: 0;
 
   width: 100%;
   max-width: 280px;
-  // height: 100%;
-  height: 230px;
-  border-radius: 24px;
 
-  transform: translateY(-100%);
+  height: calc(100% - 259px);
+  border-radius: 24px;
+  padding: 20px;
+
+  transform: translateY(50%);
   opacity: 0;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
     opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -77,10 +110,6 @@
     background-color: $bgc-product-3-overlay;
   }
 
-  // .product-card__item--cream:hover &,
-  // .product-card__item--cream:focus &,
-  // .product-card__item--coffee:hover &,
-  // .product-card__item--coffee:focus &,
   .product-card__item:hover &,
   .product-card__item:focus & {
     transform: translateY(0);
