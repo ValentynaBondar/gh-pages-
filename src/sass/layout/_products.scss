@@ -97,8 +97,8 @@
 
   transform: translateY(50%);
   opacity: 0;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms $function-products,
+    opacity 250ms $function-products;
 
   &--cream {
     background-color: $label-title-color;
@@ -129,7 +129,7 @@
 
   padding: 160px 40px 40px;
   margin: 140px auto 0;
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms $function-products;
 
   &:hover,
   &:focus {
