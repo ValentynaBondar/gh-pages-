@@ -18,12 +18,25 @@ ul {
 }
 
 .container--gallery {
+  width: 100%;
+  margin: 0 auto;
   padding-left: 0;
   padding-right: 0;
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    width: 320px;
+  }
+
+  // @media screen and (min-width: 768px) and (max-width: 1199px) {
+  //   width: 768px;
+  // }
+
+  // @media screen and (min-width: 1200px) {
+  //   width: 1200px;
+  // }
 }
 
 .gallery {
-  background: linear-gradient(to bottom, #fff5f6 17%, transparent 17%);
+  background: linear-gradient(to bottom, $bgc-body-pink 17%, transparent 17%);
   width: 320px;
   margin: 0 auto;
 }
@@ -42,7 +55,6 @@ ul {
 img {
   display: block;
   max-width: 100%;
-  object-fit: contain;
 }
 
 .grid__item {
