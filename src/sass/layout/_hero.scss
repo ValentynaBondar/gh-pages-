@@ -25,15 +25,20 @@
 
 .hero__ice{
   img{
-    z-index: 1;
+    z-index: 0;
     width: 171px;
     display: block;
     position: relative;
-   transform: translate(65%, -50%);
+    transform: translate(67%, 23%);
+    z-index: 0;
    
   }
 }
  
+}
+.hero__button{
+  position: relative;
+    z-index: 3;
 }
 .hero__container{
   position: relative;
@@ -53,6 +58,9 @@ color: $white-color;
 width: 218px;
 height: 106px;
 padding-top: 151px;
+
+position: relative;
+ z-index: 3;
   }
  
 
@@ -81,6 +89,7 @@ display: inline-block;
 min-width: 62px;
 height: 24px;
 margin-right: 9px;
+
 }
 .hero__one:hover,
 .hero__one:focus{
