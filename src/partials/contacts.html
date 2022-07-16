@@ -111,14 +111,24 @@
 
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
-            <button type="button" data-modal-close> X </button>
+            <div class="modal__close-btn">
+            <button type="button" class="modal__close" data-modal-close> 
+                <svg width="20" height="20">
+                    <use href="./images/icon.svg#icon-close-btn"></use>
+                </svg> 
+            </button>
+            </div>
             <iframe src="https://www.google.com/maps/d/u/0/embed?mid=13GIcrbubG6Oi7zyp2x3WmFkS7AygoBA&ehbc=2E312F" width="260" height="480"></iframe>
         </div>
     </div>
     
     <div class="backdrop is-hidden" data-modal-franchise>
         <div class="modal">
-            <button type="button" data-modal-franchise-close> X </button>
+            <button type="button" class="modal__close" data-modal-close>
+                <svg width="14" height="14">
+                    <use href="./images/icon.svg#icon-close-btn"></use>
+                </svg>
+            </button>
             
         </div>
     </div>
