@@ -108,7 +108,7 @@
   }
 }
 
-.advantages__item {
+.advantages__item, .weight {
     font-family: 'Titan One', sans-serif;
     font-weight: 400;
     font-size: 36px;
@@ -116,6 +116,7 @@
     letter-spacing: 0.04em;
     text-transform: uppercase;
     margin-bottom: 4px;
+    display: inline;
 
   color: $accent-color;
 
