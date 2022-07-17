@@ -1,6 +1,6 @@
 // комент
 footer {
-  background-color: #fff5f6;
+  background-color: $bgc-footer;
 }
 
 .container.footer {
@@ -10,6 +10,10 @@ footer {
     flex-direction: row;
     justify-content: space-between;
   }
+
+  @include desktop {
+    align-items: flex-end;
+  }
 }
 
 .footer_text-container {
@@ -18,6 +22,10 @@ footer {
   @include tablet {
     width: 340px;
   }
+
+  @include desktop {
+    width: 474px;
+  }
 }
 
 .footer_text {
@@ -25,7 +33,7 @@ footer {
   margin-bottom: 16px;
   font-family: Titan One;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 18px;
   line-height: calc(21px / 18px);
   text-transform: uppercase;
@@ -40,6 +48,15 @@ footer {
     letter-spacing: 0.04em;
   }
 
+  @include desktop {
+    margin-bottom: 12px;
+
+    font-weight: 400;
+    font-size: 30px;
+    line-height: calc(34px / 30px);
+    letter-spacing: 0.04em;
+  }
+
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.06, -0.84, 0.83, 0.85);
 
@@ -51,7 +68,6 @@ footer {
 
 .footer_main-text {
   font-family: Titan One;
-  font-style: normal;
   font-weight: 400;
   font-size: 34px;
   line-height: calc(39px / 34px);
@@ -65,8 +81,14 @@ footer {
     font-size: 48px;
     line-height: calc(55px / 48px);
     letter-spacing: 0.06em;
+  }
 
-    margin-bottom: 40px;
+  @include desktop {
+    margin-bottom: 60px;
+
+    font-size: 58px;
+    line-height: calc(66px / 58px);
+    letter-spacing: 0.06em;
   }
 
   transition-duration: 250ms;
@@ -86,6 +108,11 @@ footer {
     margin-bottom: 59px;
     margin-top: 60px;
   }
+
+  @include desktop {
+    margin-top: 11px;
+    margin-bottom: 60px;
+  }
 }
 
 .footer_icon-container {
@@ -100,8 +127,7 @@ footer {
   justify-content: center;
   align-items: center;
 
-  border-radius: 50%;
-  background-color: $white-color;
+  background-color: $bgc-footer;
 
   & .footer_icon {
     width: 32px;
@@ -112,6 +138,11 @@ footer {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
     @include tablet {
+      width: 34px;
+      height: 34px;
+    }
+
+    @include desktop {
       width: 34px;
       height: 34px;
     }
@@ -142,6 +173,10 @@ footer {
     font-size: 14px;
   }
 
+  @include desktop {
+    font-size: 16px;
+  }
+
   text-align: right;
 
   color: rgba(0, 0, 0, 1);
@@ -160,6 +195,10 @@ footer {
     font-size: 14px;
   }
 
+  @include desktop {
+    font-size: 16px;
+  }
+
   text-align: right;
 }
 
@@ -175,6 +214,10 @@ footer {
 
   @include tablet {
     margin-bottom: 8px;
+  }
+
+  @include desktop {
+    margin-bottom: 7px;
   }
 }
 
@@ -192,6 +235,10 @@ footer {
     line-height: 186%;
     justify-content: space-evenly;
     flex-direction: row;
+  }
+
+  @include desktop {
+    line-height: 186%;
   }
 
   text-align: center;
