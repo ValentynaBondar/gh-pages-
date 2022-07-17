@@ -177,5 +177,56 @@
         padding-right: 121px;
         margin-left: 99px;
     }
-  }  
+  } 
+  .backdrop__about {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:  rgba(129, 82, 93, 0.2);
+  }
+  .modal__about {
+    max-width: 310px;
+    max-height: 694px;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    background-color: $white-color;
+    border-radius: 20px;
+    // position: absolute;
+    padding: 40px 22px;
+  }
+  .modal__about-list {
+    text-align: center;
+    background-image: url(/src/images/milk1x.png);
+    background-position: 0px 30px;
+    background-size: 280px;
+  }
+  .modal__about-item {
+    margin-bottom: 30px;
+  }
+  .modal__about-title {
+    font-family: 'Titan One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.53;
+    color: $label-title-color;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    margin-bottom: 10px;
+  }
+  .modal__about-text {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.58;
+    color: $primary-color;
+
+    text-align: center;
+  } 
 
