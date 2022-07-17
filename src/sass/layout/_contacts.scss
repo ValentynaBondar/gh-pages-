@@ -377,7 +377,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(129, 82, 93, 0.2);
     opacity: 1;
     visibility: visible;
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -411,31 +411,147 @@
     border-radius: 6px;
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
+    @include mobile{
+        width: 300px;
+    }
+
     @include tablet{
         width: 450px;
         height: 610px;
     }
+
+    @include desktop {
+    height: 590px;
+    width: 528px;
+    }
 }
 
-.modal__close-btn {
-    display: flex;
-    justify-content: flex-end;
-}
 
 .modal__close{
     cursor: pointer;
     display: flex;
     width: 25px;
     height: 25px;
+    margin-left: auto;
+    margin-bottom: 8px;
     justify-content: center;
     justify-items: center;
     align-items: center;
     border-radius: 50%;
     border: 1px solid rgba(0,0,0,0.1);
     background: transparent;
-    stroke: aqua;
-    .modal__close-btn &:hover, .modal__close-btn &:focus {
-            border-color: $accent-color;
-            fill: $accent-color;
+    outline: transparent;
+    stroke: $primary-color;
+    transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover, &:focus {
+        border-color: $accent-color;
+        stroke: $accent-color;
+    }
+}
+
+.modal__title{
+    margin-bottom: 10px;
+    text-align: center;
+    font-family: 'Titan One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.1333;
+    letter-spacing: 0.04em;
+    color: $label-title-color;
+}
+
+.modal__map{
+    width: 100%; 
+    height: 65vh;
+
+    @include desktop{
+        height: 70vh;
+    }
+}
+
+.modal-form__label {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+
+    font-family: 'Titan One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: $secondary-color;
+}
+
+.modal-form__list{
+    margin-bottom: 15px;
+}
+
+.modal-form__list--item{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    &:last-child{
+        margin-bottom: 0;
+    }
+}
+
+.modal-form__input{
+    width: 100%;
+    height: 40px;
+    margin-top: 4px;
+    padding-left: 20px;
+    border: 1px solid rgba(33,33,33,0.2);
+    border-radius: 4px;
+    cursor: pointer;
+    outline: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-form__input:focus, .modal-form__input:hover {
+    border-color: $accent-color;
+}
+
+.modal-form__comment {
+    resize: none;
+    margin-top: 4px;
+    padding: 12px 16px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    width: 100%;
+    height: 120px;
+    outline: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        border-color: $accent-color;
+    }
+}
+
+.modal-form__submit {
+    display: block;
+    font-family: 'Titan One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    width: 161px;
+    height: 44px;
+    border-radius: 22px;
+    background-color: $bgc-btn-primary;
+    color: $white-color;
+    border: none;
+    align-items: center;
+    text-align: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    margin: 0 auto;
+    &:hover, &:focus{
+        background-color: $label-title-color;
+        color: $accent-color;
     }
 }
