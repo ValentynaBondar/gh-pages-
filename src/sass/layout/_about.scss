@@ -1,17 +1,7 @@
 
 .about {
     background-color: $bgc-body-pink;
-    // padding-top: 60px;
-    // padding-bottom: 40px;
     padding: 60px 0px 40px 0px;
-
-
-     @media screen and (min-width: 320px) and (max-width: 767px) {
-    width: 320px;
-  }
-      @media screen and (min-width: 768px) and (max-width: 1199px) {
-    width: 768px;
-  }
 }
 
 .about__toptext {
@@ -27,9 +17,14 @@
     text-transform: uppercase;
 
     @media screen and (min-width: 768px) and (max-width: 1199px) {
-    font-size: 26px;
-    line-height: 1.15;
+        font-size: 26px;
+        line-height: 1.15;
   }  
+     @media screen and (min-width: 1200px) {
+         font-size: 30px;
+         line-height: 1.13;
+         letter-spacing: 0.04em;
+  }
 }
 .about__title {
     text-align: center;
@@ -45,10 +40,16 @@
     letter-spacing: 0.04em;
     text-transform: uppercase;
 
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
-    font-size: 48px;
-    line-height: 1.14;
-  }  
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+        font-size: 48px;
+        line-height: 1.14;
+    }  
+       @media screen and (min-width: 1200px) {
+         font-size: 58px;
+         line-height: 1.13;
+         letter-spacing: 0.06em;
+         margin-bottom: 60px;
+    }
 }
 .about__box {
     margin-top: 32px;
@@ -59,6 +60,12 @@
     
     @media screen and (min-width: 768px) and (max-width: 1199px) {
     background-image:none;
+  }
+    @media screen and (min-width: 1200px) {
+    background-image: url(/src/images/milk2x.png);
+    background-repeat: no-repeat;
+    background-position: 0px -20px;
+    background-size: 1160px;
   }
 }
 
@@ -73,10 +80,16 @@
     font-size: 12px;
     line-height: 1.58;
 
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
-    font-size: 14px;
-    line-height: 1.78;
-  } 
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+        font-size: 14px;
+        line-height: 1.78;
+        width: 334px;
+    }
+         @media screen and (min-width: 1200px) {
+        font-size: 16px;
+        line-height: 1.75;
+        width: 463px;
+    } 
 }
 .about__text {
     margin-bottom: 20px;
@@ -89,10 +102,17 @@
     font-size: 12px;
     line-height: 1.58;
 
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
-    font-size: 14px;
-    line-height: 1.78;
-  } 
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+        font-size: 14px;
+        line-height: 1.78;
+        width: 334px;
+    }
+        @media screen and (min-width: 1200px) {
+        font-size: 14px;
+        line-height: 1.92;
+        width: 463px;
+        letter-spacing: 0.04em;
+    } 
 }
 .about__btn {
     background-color: $white-color;
@@ -123,6 +143,9 @@
             stroke: $white-color;
         }
     }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        margin-top: 40px;
+    }
 }
 .icon__about {
     stroke: $accent-color;
@@ -132,7 +155,27 @@
 @media screen and (min-width: 768px) and (max-width: 1199px) {
     .about__box {
         display: flex;
+        justify-content: space-between;
     }
   }
+@media screen and (min-width: 1200px) {
+    .about__box {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+    }
+}
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .about__box-text {
+        margin-left: 32px;
+    }
+  }
+@media screen and (min-width: 1200px) {
+    .about__box-text {
+        padding-top: 90px;
+        padding-right: 121px;
+        margin-left: 99px;
+    }
+  }  
 
