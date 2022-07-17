@@ -65,6 +65,7 @@
         content: "";
         height: 50px;
         background-repeat: no-repeat;
+        background-size: contain;
     }
 
     &--cow::before {
