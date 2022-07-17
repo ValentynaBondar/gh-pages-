@@ -8,7 +8,7 @@ $(window).scroll(function() {
     if (cPos < topWindow + 300) {
       if (cc < 2) {
         $(".advantages__item").addClass("viz");
-        $('h3').each(function() {
+        $('div').each(function() {
           var
             i = 1,
             num = $(this).data('num'),
