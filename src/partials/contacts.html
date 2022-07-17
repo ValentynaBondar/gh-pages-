@@ -111,25 +111,62 @@
 
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
-            <div class="modal__close-btn">
             <button type="button" class="modal__close" data-modal-close> 
                 <svg width="20" height="20">
                     <use href="./images/icon.svg#icon-close-btn"></use>
                 </svg> 
             </button>
-            </div>
-            <iframe src="https://www.google.com/maps/d/u/0/embed?mid=13GIcrbubG6Oi7zyp2x3WmFkS7AygoBA&ehbc=2E312F" width="260" height="480"></iframe>
+            <h2 class="modal__title"> Our Location </h2>
+            
+            <iframe src="https://www.google.com/maps/d/u/0/embed?mid=13GIcrbubG6Oi7zyp2x3WmFkS7AygoBA&ehbc=2E312F" class="modal__map"></iframe>
         </div>
     </div>
     
     <div class="backdrop is-hidden" data-modal-franchise>
         <div class="modal">
-            <button type="button" class="modal__close" data-modal-close>
+            <button type="button" class="modal__close" data-modal-franchise-close>
                 <svg width="14" height="14">
                     <use href="./images/icon.svg#icon-close-btn"></use>
                 </svg>
             </button>
-            
+            <h2 class="modal__title"> Leave your details to discuss cooperation </h2>
+            <form action="">
+                <ul class="modal-form__list">
+                    <li class="modal-form__list--item">
+                        <label class="modal-form__label">
+                            First Name
+                            <input type="text" class="modal-form__input">
+                        </label>
+                    </li>
+                    <li class="modal-form__list--item">
+                        <label class="modal-form__label">
+                            Last Name
+                            <input type="text" class="modal-form__input">
+                        </label>
+                    </li>
+                    <li class="modal-form__list--item">
+                        <label class="modal-form__label">
+                            Email
+                            <input type="email" class="modal-form__input">
+                        </label>
+                    </li>
+                    <li class="modal-form__list--item">
+                        <label class="modal-form__label">
+                            Phone Number
+                            <input type="tel" class="modal-form__input">
+                        </label>
+                    </li>
+                    <li class="modal-form__list--item">
+                        <label class="modal-form__label">
+                            Comment
+                            <textarea class="modal-form__comment" name="comment" placeholder="Your Messagge"></textarea>
+                        </label>
+                    </li>
+                </ul>
+                <button type="submit" class="modal-form__submit">
+                    Send
+                </button>
+            </form>
         </div>
     </div>
     </div>
