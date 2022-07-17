@@ -1,26 +1,7 @@
-.visually-hidden {
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    border: 0;
-    padding: 0;
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    margin: -1px;
-}
+
 .about {
     background-color: $bgc-body-pink;
     padding: 60px 0px 40px 0px;
-    
- @media screen and (min-width: 768px) and (max-width: 1199px) {
-    width: 768px;
-    padding-top: 60px;
-  }
-  @media screen and (min-width: 1200px) {
-    width: 1200px;
-  }
 }
 
 .about__toptext {
@@ -67,6 +48,7 @@
          font-size: 58px;
          line-height: 1.13;
          letter-spacing: 0.06em;
+         margin-bottom: 60px;
     }
 }
 .about__box {
@@ -82,9 +64,8 @@
     @media screen and (min-width: 1200px) {
     background-image: url(/src/images/milk2x.png);
     background-repeat: no-repeat;
-    background-position: 50px 0px;
-    background-size: 1200px;
-    padding-top: 60px;
+    background-position: 0px -20px;
+    background-size: 1160px;
   }
 }
 
@@ -162,6 +143,9 @@
             stroke: $white-color;
         }
     }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        margin-top: 40px;
+    }
 }
 .icon__about {
     stroke: $accent-color;
@@ -177,6 +161,21 @@
 @media screen and (min-width: 1200px) {
     .about__box {
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
+        margin: 0;
     }
 }
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .about__box-text {
+        margin-left: 32px;
+    }
+  }
+@media screen and (min-width: 1200px) {
+    .about__box-text {
+        padding-top: 90px;
+        padding-right: 121px;
+        margin-left: 99px;
+    }
+  }  
+
