@@ -57,11 +57,10 @@
 
 .contact__card--location{
     display: block;
-    margin-bottom: 24px;
+    
+    padding-bottom: 24px;
+    border-bottom: 1px solid $border-color;
 
-    @include tablet{
-        margin-bottom: 32px;
-    }
 }
 
 .type{
@@ -146,9 +145,6 @@
     line-height: 1.5;
     color: $secondary-color;
 
-    padding-bottom: 24px;
-    border-bottom: 1px solid $border-color;
-
     @include tablet{
         font-size: 14px;
         line-height: 1.64285;
@@ -161,24 +157,24 @@
     }
 }
 
-.contact__card--shedule{
-    display: block;
-    margin-bottom: 24px;
+// .contact__card--shedule{
+//     display: block;
+//     margin-bottom: 24px;
 
-    @include tablet{
-        margin-bottom: 32px;
-    }
-}
+//     @include tablet{
+//         margin-bottom: 32px;
+//     }
+// }
 
 .shedule{
     list-style: none;
     margin: 0;
     padding: 0;
-    padding-bottom: 24px;
+    padding: 24px 0;
     border-bottom: 1px solid $border-color;
 
     @include tablet{
-        padding-bottom: 32px;
+        padding: 32px 0;
     }
 }
 
@@ -240,6 +236,11 @@
     margin: 0;
     padding: 0;
     list-style: none;
+    padding-top: 24px;
+
+    @include tablet{
+        padding-top: 32px;
+    }
 
     &--link{
         text-decoration: none;
