@@ -230,7 +230,7 @@ padding: 11 23;
   }
  }
  .hero__arrow{
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 767.98px) {
     
     display: none;
   }
@@ -238,7 +238,7 @@ padding: 11 23;
  .hero__milk{
  
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 767.98px) {
     
     display: none;
   }
@@ -251,7 +251,7 @@ width: 152px;
   }
  }
  .hero__girl{
-  @media screen and (max-width: 767px){
+  @media screen and (max-width: 767.98px){
     display: none;
   }
   @include tablet{
@@ -275,7 +275,7 @@ font-size: 14px;
 line-height: 1.43;
 color: $white-color;
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 767.98px) {
     display: none;
 }
   @include tablet {
@@ -336,7 +336,7 @@ font-size: 14px;
 line-height: 1.29;
 text-align: right;
 color: $white-color;
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 767.98px) {
   display: none;
 }
 @include tablet{
