@@ -1,48 +1,59 @@
 <section class="about" id="about">
-    <div class="container">
-        <p class="about__toptext">tradition and love</p>
-        <h2 class="about__title">how it’s made?</h2>
-        <div class="about__box">
-            <picture class="about__image-top">
-                <img src="/src/images/abouttop12001x.png" alt="cow">
-            </picture>
-            <div class="about__box-text">
-                <p class="about__text-up">Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel justo cursus, faucibus lorem eget, egestas eros.
-                    Maecenas eleifend erat at justo fringilla.</p>
-                <p class="about__text">Curabitur lacinia enim at ex blandit, vel pellentesque odio elementum. Mauris rhoncus orci in imperdiet placerat.
-                    Vestibulum euismod nisl suscipit ligula volutpat, a feugiat urna maximus. Cras massa nibh, 
-                    tincidunt.</p>
-                <p class="about__text">Aliquam erat volutpat. Aenean accumsan.</p>    
-                <button class="about__btn">Read more<svg class="icon__about" width="8" height="10">
-                <use href="./images/icon.svg#icon-next"></use></svg></button>
-            </div> 
-        </div>
-        <div class="backdrop__about">
-            <div class="modal__about">
-                <ul class="modal__about-list">
-                    <li class="modal__about-item">
-                        <p class="modal__about-title">Ice cream</p>
-                        <p class="modal__about-text">Fusce ut velit laoreet, tempus arcu eu, molestie tortor. 
-                            Nam vel justo cursus, faucibus lorem eget, egestas eros. 
-                            Maecenas eleifend erat at justo fringilla.
-                            Nam vel justo cursus, faucibus lorem eget, egestas eros.</p>
-                    </li>
-                    <li class="modal__about-item">
-                        <p class="modal__about-title">Milkshakes</p>
-                        <p class="modal__about-text">Fusce ut velit laoreet, tempus arcu eu, molestie tortor. 
-                            Nam vel justo cursus, faucibus lorem eget, egestas eros. 
-                            Maecenas eleifend erat at justo fringilla.
-                            Nam vel justo cursus, faucibus lorem eget, egestas eros.</p>
-                    </li>
-                    <li class="modal__about-item">
-                        <p class="modal__about-title">Ice coffee</p>
-                        <p class="modal__about-text">Fusce ut velit laoreet, tempus arcu eu, molestie tortor. 
-                            Nam vel justo cursus, faucibus lorem eget, egestas eros. 
-                            Maecenas eleifend erat at justo fringilla.
-                            Nam vel justo cursus, faucibus lorem eget, egestas eros.</p>
-                    </li>
-                </ul>
+        <div class="container">
+            <p class="about__toptext">tradition and love</p>
+            <h2 class="about__title">how it’s made?</h2>
+            <div class="about__box">
+                <picture class="about__image-top">
+                    <img src="/src/images/abouttop12001x.png" alt="cow">
+                </picture>
+                <div class="about__box-text">
+                    <p class="about__text-up">Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel justo cursus, faucibus lorem eget, egestas eros.
+                        Maecenas eleifend erat at justo fringilla.</p>
+                    <p class="about__text">Curabitur lacinia enim at ex blandit, vel pellentesque odio elementum. Mauris rhoncus orci in imperdiet placerat.
+                        Vestibulum euismod nisl suscipit ligula volutpat, a feugiat urna maximus. Cras massa nibh, 
+                        tincidunt.</p>
+                    <p class="about__text">Aliquam erat volutpat. Aenean accumsan.</p>    
+                    <button type="button" class="about__btn" data-modal-about-open>Read more<svg class="icon__about" width="8" height="10">
+                    <use href="./images/icon.svg#icon-next"></use></svg></button>
+                </div> 
+            </div>
+            <div class="backdrop__about is-hidden" data-modal-about>
+                <div class="modal__about">
+                    <button type="button" class="modal__about-close" data-modal-about-close><svg width="14" height="14">
+                        <use href="./images/icon.svg#icon-close-btn"></use>
+                    </svg></button>
+                    <ul class="modal__about-list">
+                        <li class="modal__about-item">
+                            <p class="modal__about-title">Ice cream</p>
+                            <p class="modal__about-text">Fusce ut velit laoreet, tempus arcu eu, molestie tortor. 
+                                Nam vel justo cursus, faucibus lorem eget, egestas eros. 
+                                Maecenas eleifend erat at justo fringilla.
+                                Nam vel justo cursus, faucibus lorem eget, egestas eros.</p>
+                        </li>
+                        <li class="modal__about-item">
+                            <p class="modal__about-title">Milkshakes</p>
+                            <p class="modal__about-text">Fusce ut velit laoreet, tempus arcu eu, molestie tortor. 
+                                Nam vel justo cursus, faucibus lorem eget, egestas eros. 
+                                Maecenas eleifend erat at justo fringilla.
+                                Nam vel justo cursus, faucibus lorem eget, egestas eros.</p>
+                        </li>
+                        <li class="modal__about-item">
+                            <p class="modal__about-title">Ice coffee</p>
+                            <p class="modal__about-text">Fusce ut velit laoreet, tempus arcu eu, molestie tortor. 
+                                Nam vel justo cursus, faucibus lorem eget, egestas eros. 
+                                Maecenas eleifend erat at justo fringilla.
+                                Nam vel justo cursus, faucibus lorem eget, egestas eros.</p>
+                        </li>
+                        <li class="modal__about-item">
+                            <p class="modal__about-title">Ice coffee</p>
+                            <p class="modal__about-text">Fusce ut velit laoreet, tempus arcu eu, molestie tortor. 
+                                Nam vel justo cursus, faucibus lorem eget, egestas eros. 
+                                Maecenas eleifend erat at justo fringilla.
+                                Nam vel justo cursus, faucibus lorem eget, egestas eros.</p>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
+    <script src="./js/about.js"></script>
 </section>

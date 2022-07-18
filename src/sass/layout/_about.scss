@@ -3,7 +3,10 @@
     background-color: $bgc-body-pink;
     padding: 60px 0px 40px 0px;
 }
-
+.about .container {
+    padding-left: 0;
+    padding-right: 0;
+}
 .about__toptext {
     margin: 0px 0px 15px 0px;
     color: $label-title-color;
@@ -40,7 +43,7 @@
     letter-spacing: 0.04em;
     text-transform: uppercase;
 
-        @media screen and (min-width: 768px) and (max-width: 1199px) {
+       @media screen and (min-width: 768px) and (max-width: 1199px) {
         font-size: 48px;
         line-height: 1.14;
     }  
@@ -53,19 +56,22 @@
 }
 .about__box {
     margin-top: 32px;
+
+    @media screen and (min-width: 1199px) {
+    background-image: url(/src/images/milk2x.png);
+    background-repeat: no-repeat;
+    background-position: 0px -20px;
+    background-size: 1200px;
+  }  
+}
+.about__box-text{
     background-image: url(/src/images/milk1x.png);
     background-repeat: no-repeat;
-    background-position: 0px 340px;
+    background-position: 0px 70px;
     background-size: auto;
     
     @media screen and (min-width: 768px) and (max-width: 1199px) {
     background-image:none;
-  }
-    @media screen and (min-width: 1200px) {
-    background-image: url(/src/images/milk2x.png);
-    background-repeat: no-repeat;
-    background-position: 0px -20px;
-    background-size: 1160px;
   }
 }
 
@@ -85,7 +91,7 @@
         line-height: 1.78;
         width: 334px;
     }
-         @media screen and (min-width: 1200px) {
+         @media screen and (min-width: 1199px) {
         font-size: 16px;
         line-height: 1.75;
         width: 463px;
@@ -107,7 +113,7 @@
         line-height: 1.78;
         width: 334px;
     }
-        @media screen and (min-width: 1200px) {
+        @media screen and (min-width: 1199px) {
         font-size: 14px;
         line-height: 1.92;
         width: 463px;
@@ -158,7 +164,7 @@
         justify-content: space-between;
     }
   }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1199px) {
     .about__box {
         display: flex;
         justify-content: center;
@@ -171,7 +177,7 @@
         margin-left: 32px;
     }
   }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1199px) {
     .about__box-text {
         padding-top: 90px;
         padding-right: 121px;
@@ -184,27 +190,54 @@
     left: 0;
     width: 100%;
     height: 100%;
+    opacity: 1;
     background-color:  rgba(129, 82, 93, 0.2);
   }
+  .is-hidden {
+    opacity: 0;
+    pointer-events: none;
+}
   .modal__about {
-    max-width: 310px;
-    max-height: 694px;
-    height: 100%;
+    position: absolute;
     top: 50%;
     left: 50%;
-    background-color: $white-color;
+    transform: translate(-50%, -55%) scale(1);
+    padding: 20px;
+    height: 694px;
+    overflow: auto;
     border-radius: 20px;
-    // position: absolute;
-    padding: 40px 22px;
-  }
+    width: calc(100% - 40px);
+    background-color: $white-color;
+
+    @include mobile{
+        width: 300px;
+    }
+
+    @include tablet{
+        width: 700px;
+        height: 480px;
+        transform: translate(-50%, -90%) scale(1);
+    }
+
+    @include desktop {
+        width: 1060px;    
+        height: 600px;
+        transform: translate(-50%, -69%) scale(1);
+    }
+}
   .modal__about-list {
     text-align: center;
-    background-image: url(/src/images/milk1x.png);
-    background-position: 0px 30px;
-    background-size: 280px;
   }
   .modal__about-item {
     margin-bottom: 30px;
+    background-image: url(/src/images/milk1x.png);
+    background-position: 5px 30px;
+    background-size: 260px;
+    background-repeat: no-repeat;
+
+     @include tablet {
+        background-image: none;
+     }
   }
   .modal__about-title {
     font-family: 'Titan One';
@@ -229,4 +262,26 @@
 
     text-align: center;
   } 
-
+  .modal__about-close {
+    cursor: pointer;
+    display: flex;
+    width: 25px;
+    height: 25px;
+    margin-left: auto;
+    margin-bottom: 10px;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid $label-title-color;
+    background: transparent;
+    outline: transparent;
+    stroke: $label-title-color;
+    
+    transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover, &:focus {
+        border-color: $accent-color;
+        stroke: $accent-color;
+    }
+}
+.no-scroll{
+    overflow: hidden;
+}
