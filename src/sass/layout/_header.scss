@@ -1,15 +1,13 @@
 .header {
   position: absolute;
   width: 100%;
-  margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
   padding-top: 8px;
   z-index: 10;
   @include tablet {
     padding-top: 32px;
-    padding-left: 32px;
-    padding-right: 32px;
+  }
+  @include desktop {
+    padding-top: 37px;
   }
 }
 
@@ -106,11 +104,12 @@
   position: fixed;
   top: 0;
   right: 0;
-  background-color: #e17992;
   width: 100%;
+  background-color: #e17992;
   height: 100vh;
   opacity: 1;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 10;
   .mob-menu__container {
     display: flex;
@@ -120,8 +119,7 @@
     overflow-y: auto;
   }
   @include tablet {
-    width: 320px;
-    margin-right: auto;
+    width: calc(100% - 485px);
   }
 }
 
@@ -223,4 +221,168 @@
 
 .no-scroll {
   overflow: hidden;
+}
+
+.header-backdrop {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.header-modal {
+  width: 96%;
+  height: 550px;
+  background-color: #ffb8ca;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 12px;
+  overflow-y: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  @include tablet {
+    width: 500;
+  }
+}
+
+.header-modal__btn-close {
+  padding-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  stroke: #ffffff;
+  margin-bottom: 26px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    stroke: #d41443;
+  }
+}
+
+.modal__title {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-family: 'Titan One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 1.15;
+  text-align: center;
+  color: #d41443;
+}
+.header-modal_container {
+  display: flex;
+  flex-direction: column;
+}
+.form__title {
+  margin: 0;
+  margin-bottom: 10px;
+  font-family: 'Titan One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.15;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.modal-label {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.78;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  display: flex;
+}
+
+.modal-input {
+  margin-right: 10px;
+}
+.modal_btn-container {
+  display: flex;
+  justify-content: center;
+}
+
+.modal__btn {
+  display: block;
+  align-items: center;
+  text-align: center;
+  width: 209px;
+  height: 44px;
+  margin-top: 20px;
+  background-color: #ffffff;
+  border-radius: 22px;
+  border: none;
+  cursor: pointer;
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.31;
+  color: #d41443;
+  fill: #ffffff;
+  stroke: #d41443;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    background-color: #d41443;
+    color: #ffffff;
+    stroke: #ffffff;
+  }
+}
+
+.form__title-coffee {
+  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-family: 'Titan One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.15;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #e7ab59;
+}
+
+.header-modal::-webkit-scrollbar {
+  width: 8px;
+}
+
+.header-modal::-webkit-scrollbar-track {
+  background-color: #544d4daf;
+}
+
+.header-modal::-webkit-scrollbar-thumb {
+  background-color: #d41443;
+  border-radius: 4px;
+  border: 2px solid #544d4daf;
+}
+
+.form__title-milks {
+  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-family: 'Titan One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.15;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #abdb6b;
 }
