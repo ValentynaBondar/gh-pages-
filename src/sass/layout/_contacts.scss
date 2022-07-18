@@ -4,6 +4,11 @@
     padding: 0;
     margin-bottom: 32px;
     // align-items: center;
+    @include tablet{
+        display: flex;
+        gap: 32px;
+        margin-bottom: 60px;
+    }
 }
 
 .visually-hidden {
@@ -23,6 +28,12 @@
 .contact__section{
     background: linear-gradient($bgc-body 10%, 20%, $bgc-body-pink);
     padding-bottom: 40px;
+    padding-top: 20px;
+
+    @include tablet{
+        padding-top: 40px;
+        
+    }
 }
 
 .contact__card{
@@ -35,6 +46,11 @@
     &:last-child{
         margin-bottom: 0px;
     }
+    
+    @include tablet{
+        margin-bottom: 0;
+        width: calc((100% - 64px) / 3);
+    }
 }
 
 
@@ -42,6 +58,10 @@
 .contact__card--location{
     display: block;
     margin-bottom: 24px;
+
+    @include tablet{
+        margin-bottom: 32px;
+    }
 }
 
 .type{
@@ -60,15 +80,37 @@
     text-transform: uppercase;
     text-align: center;
     justify-content: center;
+    
     &--cafe{
         background-color: $bgc-product-1;
         width: 80px;
-        height: 16px;
     }
     &--foodtruck{
         background-color: $bgc-product-3;
         width: 130px;
-        height: 16px;
+    }
+
+    @include tablet{
+        font-size: 16px;
+        line-height: 1.875;
+        margin-bottom: 32px;
+
+        &--cafe{
+            width: 73px;
+        }
+        &--foodtruck {
+            width: 138px;
+        }
+    }
+    @include desktop{
+        line-height: 1.8125;
+        &--cafe {
+            width: 75px;
+        }
+
+        &--foodtruck {
+            width: 138px;
+        }
     }
 }
 
@@ -76,10 +118,23 @@
     margin: 0;
     margin-bottom: 8px;
     font-family: 'DM Sans';
+    font-style: normal;
     font-weight: 500;
     font-size: 12px;
     line-height: 1.8333;
     letter-spacing: 0.04em;
+    
+    @include tablet{
+        font-size: 14px;
+        line-height: 1.857;
+        margin-bottom: 12px;
+    }
+
+    @include desktop{
+        font-size: 16px;
+        line-height: 1.86;
+        margin-bottom: 8px;
+    }
 }
 
 .description{
@@ -93,11 +148,26 @@
 
     padding-bottom: 24px;
     border-bottom: 1px solid $border-color;
+
+    @include tablet{
+        font-size: 14px;
+        line-height: 1.64285;
+        padding-bottom: 32px;
+    }
+
+    @include desktop{
+        font-size: 16px;
+        line-height: 1.83;
+    }
 }
 
 .contact__card--shedule{
     display: block;
     margin-bottom: 24px;
+
+    @include tablet{
+        margin-bottom: 32px;
+    }
 }
 
 .shedule{
@@ -106,6 +176,10 @@
     padding: 0;
     padding-bottom: 24px;
     border-bottom: 1px solid $border-color;
+
+    @include tablet{
+        padding-bottom: 32px;
+    }
 }
 
 .shedule__item{
@@ -120,6 +194,16 @@
         font-size: 12px;
         line-height: 1.8333;
         color: $primary-color;
+
+        @include tablet{
+            font-size: 14px;
+            line-height: 1.8571;
+        }
+        
+        @include desktop{
+            font-size: 16px;
+            line-height: 1.86;
+        }
     }
 
     &--time{
@@ -131,10 +215,24 @@
         font-size: 12px;
         line-height: 1.8333;
         color: $label-title-color;
+
+        @include tablet{
+            font-size: 14;
+            line-height: 1.8571;
+        }
+
+        @include desktop{
+            font-size: 16px;
+            line-height: 1.86;
+        }
     }
 
     & + & {
         margin-bottom: 0;
+    }
+
+    @include tablet{
+        margin-bottom: 12px;
     }
 }
 
@@ -155,6 +253,16 @@
         &:hover, &:focus{
             color: $accent-color;
         }
+
+        @include tablet{
+            font-size: 14px;
+            line-height: 1.83;
+        }
+
+        @include desktop{
+            font-size: 16px;
+            line-height: 1.83;
+        }
     }
 }
 
@@ -163,6 +271,16 @@
     margin: 0 auto;
     padding: 0;
     text-align: center;
+    @include tablet{
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        gap: 14.5px;
+    }
+
+    @include desktop{
+        gap: 12px;
+    }
 }
 
 .button__section--item{
@@ -175,6 +293,14 @@
     font-weight: 700;
     font-size: 16px;
     line-height: 1.3125;
+
+    @include tablet{
+        margin: 0;
+    }
+
+    @include desktop{
+        line-height: 1.301;
+    }
 }
 
 .button__location{
@@ -194,6 +320,14 @@
         .icon__location{
             stroke: $accent-color;
         }
+    }
+
+    @include tablet{
+        width: 191px;
+    }
+
+    @include desktop{
+        width: 198px;
     }
 }
 
@@ -217,6 +351,14 @@
             stroke: $white-color;
         }
     }
+
+    @include tablet{
+        width: 174px;
+    }
+
+    @include desktop{
+        width: 168px;
+    }
 }
 
 .icon__location {
@@ -235,7 +377,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(129, 82, 93, 0.2);
     opacity: 1;
     visibility: visible;
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -268,4 +410,148 @@
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 6px;
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    @include mobile{
+        width: 300px;
+    }
+
+    @include tablet{
+        width: 450px;
+        height: 610px;
+    }
+
+    @include desktop {
+    height: 590px;
+    width: 528px;
+    }
+}
+
+
+.modal__close{
+    cursor: pointer;
+    display: flex;
+    width: 25px;
+    height: 25px;
+    margin-left: auto;
+    margin-bottom: 8px;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid rgba(0,0,0,0.1);
+    background: transparent;
+    outline: transparent;
+    stroke: $primary-color;
+    transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover, &:focus {
+        border-color: $accent-color;
+        stroke: $accent-color;
+    }
+}
+
+.modal__title{
+    margin-bottom: 10px;
+    text-align: center;
+    font-family: 'Titan One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.1333;
+    letter-spacing: 0.04em;
+    color: $label-title-color;
+}
+
+.modal__map{
+    width: 100%; 
+    height: 65vh;
+
+    @include desktop{
+        height: 70vh;
+    }
+}
+
+.modal-form__label {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+
+    font-family: 'Titan One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: $secondary-color;
+}
+
+.modal-form__list{
+    margin-bottom: 15px;
+}
+
+.modal-form__list--item{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    &:last-child{
+        margin-bottom: 0;
+    }
+}
+
+.modal-form__input{
+    width: 100%;
+    height: 40px;
+    margin-top: 4px;
+    padding-left: 20px;
+    border: 1px solid rgba(33,33,33,0.2);
+    border-radius: 4px;
+    cursor: pointer;
+    outline: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-form__input:focus, .modal-form__input:hover {
+    border-color: $accent-color;
+}
+
+.modal-form__comment {
+    resize: none;
+    margin-top: 4px;
+    padding: 12px 16px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    width: 100%;
+    height: 120px;
+    outline: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        border-color: $accent-color;
+    }
+}
+
+.modal-form__submit {
+    display: block;
+    font-family: 'Titan One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    width: 161px;
+    height: 44px;
+    border-radius: 22px;
+    background-color: $bgc-btn-primary;
+    color: $white-color;
+    border: none;
+    align-items: center;
+    text-align: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    margin: 0 auto;
+    &:hover, &:focus{
+        background-color: $label-title-color;
+        color: $accent-color;
+    }
 }

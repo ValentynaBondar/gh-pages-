@@ -12,34 +12,47 @@
 }
 
 .reviews {
+    // width: 100%;
+    // max-width: 280px;
     padding-top: 60px;
     padding-bottom: 60px;
     text-align: center;
+    @include tablet {
+        max-width: 620px;
+        padding-bottom: 80px;
+    }
+    @include desktop {
+        max-width: 968px;
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
 }
 
 .slide__photo {
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 29px;
+    margin-bottom: 32px;
     max-width: 85px;
 }
 
 .slide__text-box {
     position: relative;
-
-    padding: 20px 20px;
+    // max-width: 100%;
+    padding: 30px;
     margin-bottom: 16px;
     background-color: $bgc-customer-reviews;
 
     @include tablet {
-        margin-bottom: 42px;
+        margin-left: auto;
+        margin-right: auto;
+        // max-width: 620px;
         padding: 20px 20px;
-        max-width: 760px;
+        
     }
     @include desktop {
-        margin-bottom: 34px;
-    max-width: 926px;
-    padding: 32px 52px;
+        // margin-bottom: 34px;
+        // max-width: 968px;
+        padding: 32px 52px;
     }
 }
 .slide__text {
@@ -55,16 +68,26 @@
     max-width: 150px;
     background-color: $bgc-customer-reviews;
     background-image: repeating-linear-gradient(
-    180deg,transparent,transparent 30px,#e1e1e1 0,#e1e1e1 31px
-        );
+    180deg,transparent,transparent 30px,#e1e1e1 0,#e1e1e1 31px);
     
     @include tablet {
         padding-left: 50px;
         padding-right: 50px;
-        max-width: 760px;
+        max-width: 514px;
         font-size: 14px;
         line-height: 2.16;
         letter-spacing: 0.04em;
+        background-image: repeating-linear-gradient(
+        180deg,
+        transparent,
+        transparent 27px,
+        #e1e1e1 0,
+        #e1e1e1 29px);
+}
+    @include desktop {
+        max-width: 822px;
+        font-size: 16px;
+        line-height: 186%;
     }
 }
 
@@ -76,13 +99,16 @@
     width: 54px;
     height: 40px;
     top: -5%;
-    left: -10%;
-    z-index: 9;
+    left: -30%;
+    z-index: -9;
     background-image: url(../images/reviews/symbol.png);
 
     @include tablet {
-        top: -22px;
-        left: 10px;
+        top: -10%;
+        left: 20px;
+    }
+    @include desktop {
+        left: 20px;
     }
 }
 
@@ -93,13 +119,22 @@
     font-size: 14px;
     line-height: 26px;
     color: $primary-color;
+    @include tablet {
+        font-size: 16px;
+        line-height: 30px;
+        margin-bottom: 32px;
+    }
+    @include desktop {
+        font-size: 20px;
+        line-height: 186%;
+    }
 }
 
 .slide__name::before {
     content: "";
     display: block;
     background-size: 32px 4px;
-    margin: 0 auto 15px;
+    margin: 0 auto 16px;
     width: 32px;
     height: 4px;
     background-image: url(../images/reviews/circle.svg);

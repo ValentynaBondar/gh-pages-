@@ -1,83 +1,86 @@
 .advantages {
   width: 100%;
-  padding-top: 20px;
   padding-bottom: 60px;
   background-color: $bgc-body-pink;
+
+  @include desktop {
+    padding-bottom: 120px;
+  }
 }
 .advantages__box {
-    width: 100%;
+  margin: 0 auto;
+  max-width: 1200px;
 
-    @media screen and (min-width: 768px) {
-       padding-left: 12px;
-    }
+  @include tablet {
+    padding-left: 12px;
+  }
 
-    @media screen and (min-width: 1200px) {
-        padding-left: -4px;
-     }
+  @include desktop {
+    padding-left: -4px;
+  }
 }
 .advantages__title {
-    color: $bgc-body-pink;
-    font-size: 0;
-    margin: 0;
-    padding: 0;
-    margin-bottom: 32px;
+  font-size: 0;
+  margin: 0;
+  padding: 0;
+  visibility: hidden;
 }
 
 .advantages__list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    cursor: pointer;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
 
-    @media screen and (min-width: 768px) {
-        display: flex;
-    }
-
+  @include tablet {
+    display: flex;
+  }
 }
 
 .advantages__card {
-    max-width: 230px;
-    margin-bottom: 32px;
+  max-width: 230px;
+  margin-bottom: 32px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include tablet {
+    max-width: 180px;
+    margin-bottom: 0;
+    margin-right: 4px;
 
     &:last-child {
-        margin-bottom: 0;
+      margin-right: 0;
     }
+  }
 
-    @media screen and (min-width: 768px) {
-        max-width: 180px;
-        margin-bottom: 0;
-        margin-right: 4px;
+  @include desktop {
+    max-width: 288px;
+    margin-bottom: 0;
+    margin-right: 115px;
+  }
 
-        &:last-child {
-            margin-right: 0;
-        }
-    }
+  &::before {
+    display: block;
+    margin-bottom: 16px;
+    content: "";
+    height: 50px;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
 
-    @media screen and (min-width: 1200px) {
-        max-width: 288px;
-        margin-bottom: 0;
-        margin-right: 115px;
-    }
+  &--cow::before {
+    background-image: url('..//images/cow1x.png');
+  }
 
-    &::before {
-        display: block;
-        margin-bottom: 16px;
-        content: "";
-        height: 50px;
-        background-repeat: no-repeat;
-    }
+  &--аpple::before {
+    background-image: url('..//images/аpple1x.png');
+  }
 
-    &--cow::before {
-        background-image: url('..//images/cow1x.png');
-    }
-
-    &--аpple::before {
-        background-image: url('..//images/аpple1x.png');
-    }
-
-    &--heart::before {
-        background-image: url('..//images/heart1x.png');
-    }
+  &--heart::before {
+    background-image: url('..//images/heart1x.png');
+  }
 }
 
 @media (min-device-pixel-ratio: 2),
@@ -107,42 +110,41 @@
   }
 }
 
-.advantages__item {
-    font-family: 'Titan One', sans-serif;
-    font-weight: 400;
-    font-size: 36px;
-    line-height: 1.14;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    margin-bottom: 4px;
+.advantages__item, .weight {
+  font-family: 'Titan One', sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 1.14;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  display: inline;
 
   color: $accent-color;
 
-  @media screen and (min-width: 768px) {
+  @include tablet {
     font-size: 48px;
     text-transform: none;
   }
 
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     font-size: 58px;
   }
 }
 
 .advantages__text {
-
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 700;
-    font-size: 12px;
-    line-height: 1.7;
-
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.7;
 
   color: $primary-color;
 
-  @media screen and (min-width: 768px) {
+  @include tablet {
     font-size: 14px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     font-size: 16px;
   }
 }
