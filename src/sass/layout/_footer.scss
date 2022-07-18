@@ -28,13 +28,6 @@ footer {
     width: 478px;
     margin-bottom: 60px;
   }
-
-  & :hover,
-  & :focus {
-    transform: scale(1.05);
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.06, -0.84, 0.83, 0.85);
-  }
 }
 
 .footer_text {
