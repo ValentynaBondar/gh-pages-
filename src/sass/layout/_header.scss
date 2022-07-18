@@ -1,4 +1,5 @@
 .header {
+  background-color: #e17992;
   position: absolute;
   width: 100%;
   padding-top: 8px;
@@ -59,12 +60,9 @@
     display: none;
   }
 }
-
-.header-btn {
-  display: none;
+.btn {
   align-items: center;
   text-align: center;
-  margin-left: 32px;
   width: 209px;
   height: 44px;
   background-color: #ffffff;
@@ -88,6 +86,10 @@
     color: #ffffff;
     stroke: #ffffff;
   }
+}
+.header-btn {
+  display: none;
+  margin-left: 32px;
   @include tablet {
     display: block;
   }
@@ -143,33 +145,8 @@
 
 .mob-menu__btn {
   display: block;
-  align-items: center;
-  text-align: center;
   margin: auto;
-  width: 209px;
-  height: 44px;
   margin-bottom: 19px;
-  background-color: #ffffff;
-  border-radius: 22px;
-  border: none;
-  cursor: pointer;
-  font-family: 'DM Sans';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.31;
-  color: #d41443;
-  fill: #ffffff;
-  stroke: #d41443;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  &:hover,
-  &:focus {
-    background-color: #d41443;
-    color: #ffffff;
-    stroke: #ffffff;
-  }
 }
 
 .mob-menu__btn-icon {
@@ -246,7 +223,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   @include tablet {
-    width: 500;
+    width: 380px;
   }
 }
 
@@ -282,10 +259,10 @@
 .header-modal_container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
-.form__title {
-  margin: 0;
-  margin-bottom: 10px;
+
+.title {
   font-family: 'Titan One';
   font-style: normal;
   font-weight: 400;
@@ -293,7 +270,28 @@
   line-height: 1.15;
   letter-spacing: 0.04em;
   text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+}
+
+.form__title {
+  margin: 0;
+  margin-bottom: 10px;
   color: #ffffff;
+}
+
+.form__title-coffee {
+  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: #e7ab59;
+}
+
+.form__title-milks {
+  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: #abdb6b;
 }
 
 .modal-label {
@@ -305,11 +303,13 @@
   letter-spacing: 0.04em;
   color: #ffffff;
   display: flex;
+  justify-content: center;
 }
 
 .modal-input {
   margin-right: 10px;
 }
+
 .modal_btn-container {
   display: flex;
   justify-content: center;
@@ -345,20 +345,6 @@
   }
 }
 
-.form__title-coffee {
-  margin: 0;
-  margin-top: 10px;
-  margin-bottom: 5px;
-  font-family: 'Titan One';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 1.15;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: #e7ab59;
-}
-
 .header-modal::-webkit-scrollbar {
   width: 8px;
 }
@@ -371,18 +357,4 @@
   background-color: #d41443;
   border-radius: 4px;
   border: 2px solid #544d4daf;
-}
-
-.form__title-milks {
-  margin: 0;
-  margin-top: 10px;
-  margin-bottom: 5px;
-  font-family: 'Titan One';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 1.15;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: #abdb6b;
 }
