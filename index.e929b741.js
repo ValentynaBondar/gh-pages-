@@ -1,0 +1,2 @@
+!function(){$(".rev__slider").slick({arrows:!1,speed:1500,dots:!0,slidesToShow:1,slidesToScroll:1,autoplay:!0,autoplaySpeed:2500}),AOS.init();var t=1;$(window).scroll((function(){$("#counter").each((function(){$(this).offset().top<$(window).scrollTop()+300&&t<2&&($(".advantages__item").addClass("viz"),$("div").each((function(){var o=1,a=$(this).data("num"),e=2e3/a,i=$(this),s=setInterval((function(){o<=a?i.html(o):(t+=2,clearInterval(s)),o++}),e)})))}))}))}();
+//# sourceMappingURL=index.e929b741.js.map
