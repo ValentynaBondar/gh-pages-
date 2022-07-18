@@ -158,7 +158,7 @@
 
 .product-card__overlay {
   position: absolute;
-  z-index: 2;
+
   bottom: 85px;
   left: 0;
 
@@ -203,7 +203,6 @@
 
 .product-card__item {
   position: relative;
-  overflow: hidden;
 
   box-sizing: border-box;
 
