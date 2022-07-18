@@ -12,9 +12,6 @@
 }
 
 .reviews {
-    // width: 100%;
-    // max-width: 280px;
-    padding-top: 60px;
     padding-bottom: 60px;
     text-align: center;
     @include tablet {
@@ -23,7 +20,6 @@
     }
     @include desktop {
         max-width: 968px;
-        padding-top: 120px;
         padding-bottom: 120px;
     }
 }
@@ -37,7 +33,6 @@
 
 .slide__text-box {
     position: relative;
-    // max-width: 100%;
     padding: 30px;
     margin-bottom: 16px;
     background-color: $bgc-customer-reviews;
@@ -45,13 +40,10 @@
     @include tablet {
         margin-left: auto;
         margin-right: auto;
-        // max-width: 620px;
         padding: 20px 20px;
         
     }
     @include desktop {
-        // margin-bottom: 34px;
-        // max-width: 968px;
         padding: 32px 52px;
     }
 }
