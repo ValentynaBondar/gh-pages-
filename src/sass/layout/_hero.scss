@@ -26,7 +26,7 @@
     width: 335px;
     height: 333px;
     left: 48%;
-    transform: translate(-50%, -39%);
+    transform: translate(-35%, -35%);
   }
   @include desktop{
     width: 534px;
@@ -161,7 +161,6 @@ display: inline-block;
 justify-content: center;
 align-items: center;
 text-align: center;
-color: $white-color;
 background:$accent-color;
 border-radius: 20px;
 border: 0px solid transparent;
@@ -171,6 +170,8 @@ min-height: 25.8px;
 margin-right: 9px;
 padding: 8px;
 transition: color 250ms linear, background-color 250ms linear;
+color: $white-color;
+
 @include tablet{
 
 }
@@ -347,6 +348,7 @@ color: $white-color;
 line-height: 1.3;
 }
 }
+
 .hero__class{
     font-family: 'Titan One';
 font-style: normal;
@@ -369,9 +371,9 @@ color: $accent-color;
     height: 16px;
     border-radius: 50%;
     position: absolute;
-    background: $label-title-color;
+    background: #FFFFFF;
     position: absolute;
-    transform: translate(-37%, -35%);
+    transform: translate(-50%, 50%);
     transition: transform rotateZ(20deg) 500ms cubic-bezier( 0.4, 0, 0.2, 1);
 }
 
@@ -392,14 +394,13 @@ line-height: 1.15;
       height: 16px;
       border-radius: 50%;
       position: absolute;
-      background: $label-title-color;
+      background: #FFFFFF;
       position: absolute;
-      transform: translate(-37%, -35%);
+      transform: translate(50%, -50%);
       transition: transform rotateZ(20deg) 500ms cubic-bezier( 0.4, 0, 0.2, 1);
     
   }
-}}
-
+} }
 .hero__right{
   position: absolute;
     right: 0;
@@ -416,4 +417,19 @@ line-height: 1.15;
 }
 .hero__left{
   position: relative;
+}
+.hero__girl{
+
+  @media screen  and (max-width: 767.98px){
+    
+    display: none;
+  }
+  @include tablet{
+    width: 190px;
+
+  }
+  @include desktop{
+    width: 304px;
+    bottom: -33px;
+  }
 }
