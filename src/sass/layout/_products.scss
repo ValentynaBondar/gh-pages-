@@ -11,13 +11,13 @@
 
     color: $label-title-color;
 
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 767.98px) {
       margin: 0 0 15px;
 
       font-size: 18px;
       line-height: 1.17;
     }
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
+    @media screen and (min-width: 768px) and (max-width: 1199.98px) {
       margin: 0 0 18px;
 
       font-size: 26px;
@@ -45,20 +45,20 @@
 
     color: $accent-color;
 
-    @media screen and (max-width: 767px) {
-      padding-bottom: 8px;
+    @media screen and (max-width: 767.98px) {
+      margin-bottom: 8px;
 
       font-size: 34px;
       line-height: 1.15;
     }
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
-      padding-bottom: 20px;
+    @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+      margin-bottom: 20px;
 
       font-size: 48px;
       line-height: 1.15;
     }
     @media screen and (min-width: 1200px) {
-      padding-bottom: 20px;
+      margin-bottom: 20px;
 
       font-size: 58px;
       line-height: 1.14;
@@ -85,13 +85,13 @@
 
     color: $bgc-body;
 
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 767.98px) {
       font-size: 14px;
       line-height: 152%;
 
       padding-bottom: 45px;
     }
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
+    @media screen and (min-width: 768px) and (max-width: 1199.98px) {
       font-size: 14px;
       line-height: 176%;
     }
@@ -112,12 +112,12 @@
     letter-spacing: 0.1em;
 
     color: $white-color;
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 767.98px) {
       font-size: 14px;
       line-height: 1.15;
       padding: 0px 0px 20px;
     }
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
+    @media screen and (min-width: 768px) and (max-width: 1199.98px) {
       font-size: 16px;
       line-height: 1.16;
       padding: 0px 0px 30px;
@@ -141,11 +141,11 @@
 
     color: $bgc-body;
 
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 767.98px) {
       font-size: 14px;
       line-height: 152%;
     }
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
+    @media screen and (min-width: 768px) and (max-width: 1199.98px) {
       font-size: 16px;
       line-height: 162%;
     }
@@ -172,10 +172,10 @@
   transition: transform 250ms $function-products,
     opacity 250ms $function-products;
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 767.98px) {
     height: calc(100% - 237px);
   }
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
+  @media screen and (min-width: 768px) and (max-width: 1199.98px) {
     height: calc(100% - 183px);
   }
   @media screen and (min-width: 1200px) {
@@ -203,13 +203,15 @@
 
 .product-card__item {
   position: relative;
+  overflow: hidden;
+
   box-sizing: border-box;
 
   transition: box-shadow 250ms $function-products;
 
   text-align: center;
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 767.98px) {
     width: 100%;
     max-width: 280px;
     min-height: 489px;
@@ -218,7 +220,7 @@
     margin: 140px auto 0;
   }
 
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
+  @media screen and (min-width: 768px) and (max-width: 1199.98px) {
     width: 224px;
     height: 473px;
 
@@ -260,7 +262,7 @@
     width: 100%;
     height: 280px;
 
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
+    @media screen and (min-width: 768px) and (max-width: 1199.98px) {
       top: -138px;
       height: 224px;
     }
@@ -278,7 +280,7 @@
 
   &::before {
     content: '';
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 767.98px) {
       background-image: url('../images/ice-cream@320_1x.png');
       @media (min-device-pixel-ratio: 2),
         (min-resolution: 192dpi),
@@ -288,7 +290,7 @@
         }
       }
     }
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
+    @media screen and (min-width: 768px) and (max-width: 1199.98px) {
       background-image: url('../images/ice-cream@768_1x.png');
       @media (min-device-pixel-ratio: 2),
         (min-resolution: 192dpi),
@@ -317,7 +319,7 @@
 
   &::before {
     content: '';
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 767.98px) {
       background-image: url('../images/coffee@320_1x.png');
       @media (min-device-pixel-ratio: 2),
         (min-resolution: 192dpi),
@@ -327,7 +329,7 @@
         }
       }
     }
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
+    @media screen and (min-width: 768px) and (max-width: 1199.98px) {
       background-image: url('../images/coffee@768_1x.png');
       @media (min-device-pixel-ratio: 2),
         (min-resolution: 192dpi),
@@ -356,7 +358,7 @@
 
   &::before {
     content: '';
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 767.98px) {
       background-image: url('../images/milkshakes@320_1x.png');
       @media (min-device-pixel-ratio: 2),
         (min-resolution: 192dpi),
@@ -366,7 +368,7 @@
         }
       }
     }
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
+    @media screen and (min-width: 768px) and (max-width: 1199.98px) {
       background-image: url('../images/milkshakes@768_1x.png');
       @media (min-device-pixel-ratio: 2),
         (min-resolution: 192dpi),
