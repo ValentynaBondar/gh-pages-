@@ -739,3 +739,13 @@
     stroke: $bgc-product-3-overlay;
   }
 }
+
+.backdrop.backdrop--cream {
+  background-color: rgb(196, 85, 85);
+}
+.backdrop.backdrop--coffee {
+  background-color: rgb(132, 101, 44);
+}
+.backdrop.backdrop--milkshakes {
+  background-color: rgb(67, 109, 61);
+}
