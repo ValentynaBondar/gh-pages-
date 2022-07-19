@@ -153,11 +153,9 @@ button {
   }
 }
 
-.header-btn {
-  display: none;
+.btn {
   align-items: center;
   text-align: center;
-  margin-left: 32px;
   width: 209px;
   height: 44px;
   background-color: #ffffff;
@@ -174,10 +172,15 @@ button {
   stroke: #d41443;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.header-btn:hover, .header-btn:focus {
+.btn:hover, .btn:focus {
   background-color: #d41443;
   color: #ffffff;
   stroke: #ffffff;
+}
+
+.header-btn {
+  display: none;
+  margin-left: 32px;
 }
 @media screen and (min-width: 768px) {
   .header-btn {
@@ -200,7 +203,7 @@ button {
   right: 0;
   width: 100%;
   background-color: #e17992;
-  height: 100vh;
+  height: 100%;
   opacity: 1;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 10;
@@ -237,30 +240,8 @@ button {
 
 .mob-menu__btn {
   display: block;
-  align-items: center;
-  text-align: center;
   margin: auto;
-  width: 209px;
-  height: 44px;
   margin-bottom: 19px;
-  background-color: #ffffff;
-  border-radius: 22px;
-  border: none;
-  cursor: pointer;
-  font-family: "DM Sans";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.31;
-  color: #d41443;
-  fill: #ffffff;
-  stroke: #d41443;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.mob-menu__btn:hover, .mob-menu__btn:focus {
-  background-color: #d41443;
-  color: #ffffff;
-  stroke: #ffffff;
 }
 
 .mob-menu__btn-icon {
@@ -339,7 +320,7 @@ button {
 }
 @media screen and (min-width: 768px) {
   .header-modal {
-    width: 500;
+    width: 380px;
   }
 }
 
@@ -360,7 +341,7 @@ button {
   stroke: #d41443;
 }
 
-.modal__title {
+.modal-form__title {
   margin-top: 15px;
   margin-bottom: 15px;
   font-family: "Titan One";
@@ -375,11 +356,10 @@ button {
 .header-modal_container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
-.form__title {
-  margin: 0;
-  margin-bottom: 10px;
+.title {
   font-family: "Titan One";
   font-style: normal;
   font-weight: 400;
@@ -387,7 +367,28 @@ button {
   line-height: 1.15;
   letter-spacing: 0.04em;
   text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+}
+
+.form__title {
+  margin: 0;
+  margin-bottom: 10px;
   color: #ffffff;
+}
+
+.form__title-coffee {
+  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: #e7ab59;
+}
+
+.form__title-milks {
+  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: #abdb6b;
 }
 
 .modal-label {
@@ -399,6 +400,7 @@ button {
   letter-spacing: 0.04em;
   color: #ffffff;
   display: flex;
+  justify-content: center;
 }
 
 .modal-input {
@@ -437,20 +439,6 @@ button {
   stroke: #ffffff;
 }
 
-.form__title-coffee {
-  margin: 0;
-  margin-top: 10px;
-  margin-bottom: 5px;
-  font-family: "Titan One";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 1.15;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: #e7ab59;
-}
-
 .header-modal::-webkit-scrollbar {
   width: 8px;
 }
@@ -463,20 +451,6 @@ button {
   background-color: #d41443;
   border-radius: 4px;
   border: 2px solid rgba(84, 77, 77, 0.6862745098);
-}
-
-.form__title-milks {
-  margin: 0;
-  margin-top: 10px;
-  margin-bottom: 5px;
-  font-family: "Titan One";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 1.15;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: #abdb6b;
 }
 
 .hero {
@@ -1571,7 +1545,8 @@ button {
 
 .about {
   background-color: #fff5f6;
-  padding: 60px 0px 40px 0px;
+  padding-top: 60px;
+  padding-bottom: 40px;
 }
 
 .about__toptext {
@@ -1585,7 +1560,7 @@ button {
   text-align: center;
   text-transform: uppercase;
 }
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
   .about__toptext {
     font-size: 26px;
     line-height: 1.15;
@@ -1611,7 +1586,7 @@ button {
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
   .about__title {
     font-size: 48px;
     line-height: 1.14;
@@ -1628,22 +1603,25 @@ button {
 
 .about__box {
   margin-top: 32px;
-  background-image: url(/src/images/milk1x.png);
-  background-repeat: no-repeat;
-  background-position: 0px 340px;
-  background-size: auto;
 }
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .about__box {
-    background-image: none;
-  }
-}
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1199px) {
   .about__box {
     background-image: url(/src/images/milk2x.png);
     background-repeat: no-repeat;
     background-position: 0px -20px;
-    background-size: 1160px;
+    background-size: 1200px;
+  }
+}
+
+.about__box-text {
+  background-image: url(/src/images/milk1x.png);
+  background-repeat: no-repeat;
+  background-position: 0px 70px;
+  background-size: auto;
+}
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .about__box-text {
+    background-image: none;
   }
 }
 
@@ -1658,7 +1636,7 @@ button {
   font-size: 12px;
   line-height: 1.58;
 }
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
   .about__text-up {
     font-size: 14px;
     line-height: 1.78;
@@ -1683,7 +1661,7 @@ button {
   font-size: 12px;
   line-height: 1.58;
 }
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
   .about__text {
     font-size: 14px;
     line-height: 1.78;
@@ -1724,7 +1702,7 @@ button {
 .about__btn:hover .icon__about, .about__btn:focus .icon__about {
   stroke: #ffffff;
 }
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
   .about__btn {
     margin-top: 40px;
   }
@@ -1736,20 +1714,20 @@ button {
   margin-left: 13px;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
   .about__box {
     display: flex;
     justify-content: space-between;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1199px) {
   .about__box {
     display: flex;
     justify-content: center;
     margin: 0;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
   .about__box-text {
     margin-left: 32px;
   }
@@ -1760,6 +1738,143 @@ button {
     padding-right: 121px;
     margin-left: 99px;
   }
+}
+.backdrop__about {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  background-color: rgba(129, 82, 93, 0.2);
+}
+
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal__about {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-55%, -50%) scale(1);
+  padding: 10px;
+  overflow: auto;
+  border-radius: 20px;
+  width: calc(100% - 40px);
+  background-color: #ffa5ba;
+}
+@media screen and (min-width: 320px) {
+  .modal__about {
+    width: 300px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .modal__about {
+    width: 670px;
+    padding: 20px;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal__about {
+    width: 970px;
+    transform: translate(-50%, -50%) scale(1);
+    padding-top: 20px;
+  }
+}
+
+.modal__about-list {
+  text-align: center;
+}
+
+.modal__about-item {
+  margin-bottom: 30px;
+  background-image: url(/src/images/milk1x.png);
+  background-position: 5px 30px;
+  background-size: 260px;
+  background-repeat: no-repeat;
+}
+@media screen and (min-width: 768px) {
+  .modal__about-item {
+    background-image: none;
+  }
+}
+
+.modal__about-title {
+  font-family: "Titan One";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.53;
+  color: #d41443;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  text-align: center;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 768px) {
+  .modal__about-title {
+    font-size: 26px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal__about-title {
+    font-size: 30px;
+  }
+}
+
+.modal__about-text {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.58;
+  color: #000000;
+  text-align: center;
+}
+
+.modal__about-close {
+  cursor: pointer;
+  display: flex;
+  width: 25px;
+  height: 25px;
+  margin-left: auto;
+  align-items: center;
+  border-radius: 50%;
+  border: 1px solid #d41443;
+  background: transparent;
+  outline: transparent;
+  stroke: #d41443;
+  z-index: 3;
+  position: relative;
+  transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal__about-close:hover, .modal__about-close:focus {
+  border-color: #d41443;
+  stroke: #d41443;
+}
+.no-scroll {
+  overflow: hidden;
+}
+
+.about-modal__video-wrap {
+  position: relative;
+  padding-bottom: 56.25%; /* задаёт высоту контейнера для 16:9 (если 4:3 — поставьте 75%) */
+  height: 0;
+  overflow: hidden;
+}
+.about-modal__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-width: 0;
+  outline-width: 0;
+  border-radius: 10px;
 }
 .advantages {
   width: 100%;
@@ -2297,12 +2412,8 @@ img {
 
 .contact__card--location {
   display: block;
-  margin-bottom: 24px;
-}
-@media screen and (min-width: 768px) {
-  .contact__card--location {
-    margin-bottom: 32px;
-  }
+  padding-bottom: 24px;
+  border-bottom: 1px solid #e1e1e1;
 }
 
 .type {
@@ -2387,8 +2498,6 @@ img {
   font-size: 12px;
   line-height: 1.5;
   color: #907e82;
-  padding-bottom: 24px;
-  border-bottom: 1px solid #e1e1e1;
 }
 @media screen and (min-width: 768px) {
   .description {
@@ -2404,26 +2513,16 @@ img {
   }
 }
 
-.contact__card--shedule {
-  display: block;
-  margin-bottom: 24px;
-}
-@media screen and (min-width: 768px) {
-  .contact__card--shedule {
-    margin-bottom: 32px;
-  }
-}
-
 .shedule {
   list-style: none;
   margin: 0;
   padding: 0;
-  padding-bottom: 24px;
+  padding: 24px 0;
   border-bottom: 1px solid #e1e1e1;
 }
 @media screen and (min-width: 768px) {
   .shedule {
-    padding-bottom: 32px;
+    padding: 32px 0;
   }
 }
 
@@ -2487,6 +2586,12 @@ img {
   margin: 0;
   padding: 0;
   list-style: none;
+  padding-top: 24px;
+}
+@media screen and (min-width: 768px) {
+  .contact__info {
+    padding-top: 32px;
+  }
 }
 .contact__info--link {
   text-decoration: none;
