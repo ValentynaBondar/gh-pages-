@@ -2,13 +2,19 @@
   position: absolute;
   width: 100%;
   padding-top: 8px;
+
   z-index: 5;
+
+
+
+
   @include tablet {
     padding-top: 32px;
   }
   @include desktop {
     padding-top: 37px;
   }
+
 }
 
 .header-container {
