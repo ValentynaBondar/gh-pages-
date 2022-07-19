@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 .anchor{
     display: flex;
     justify-content: flex-end;
@@ -6,7 +10,7 @@
 .anchor-link{
     display: flex;
     position: fixed;
-    
+    z-index: 3;
     bottom: 30px;
     justify-content: center;
     align-items: center;
