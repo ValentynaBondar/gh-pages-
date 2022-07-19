@@ -18,15 +18,16 @@ footer {
 
 .footer_text-container {
   width: 234px;
-  margin-bottom: 40px;
+  padding-bottom: 40px;
 
   @include tablet {
     width: 340px;
+    height: 100%;
   }
 
   @include desktop {
     width: 478px;
-    margin-bottom: 60px;
+    padding-bottom: 60px;
   }
 }
 
@@ -84,17 +85,17 @@ footer {
 }
 
 .footer_social-container {
-  margin-bottom: 40px;
+  padding-bottom: 40px;
   text-align: right;
 
   @include tablet {
-    margin-bottom: 59px;
-    margin-top: 60px;
+    padding-top: 60px;
+    padding-bottom: 59px;
   }
 
   @include desktop {
-    margin-top: 11px;
-    margin-bottom: 60px;
+    padding-top: 11px;
+    padding-bottom: 60px;
   }
 }
 
@@ -173,6 +174,14 @@ footer {
   font-size: 12px;
   line-height: 186%;
   text-decoration: none;
+
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:focus,
+  &:hover {
+    color: rgba(144, 126, 130, 1);
+  }
 
   @include tablet {
     font-size: 14px;
