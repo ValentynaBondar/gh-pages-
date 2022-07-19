@@ -4,8 +4,10 @@
     padding: 60px 0px 40px 0px;
 }
 .about .container {
+    @media screen and (min-width: 1200px) {
     padding-left: 0;
     padding-right: 0;
+    }
 }
 .about__toptext {
     margin: 0px 0px 15px 0px;
@@ -70,7 +72,7 @@
     background-position: 0px 70px;
     background-size: auto;
     
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
+    @media screen and (min-width: 768px) {
     background-image:none;
   }
 }
@@ -149,7 +151,7 @@
             stroke: $white-color;
         }
     }
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
+    @media screen and (min-width: 768px) and (max-width: 1200px) {
         margin-top: 40px;
     }
 }
@@ -158,13 +160,13 @@
     transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
     margin-left: 13px;   
 }
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
     .about__box {
         display: flex;
         justify-content: space-between;
     }
   }
-@media screen and (min-width: 1199px) {
+@media screen and (min-width: 1200px) {
     .about__box {
         display: flex;
         justify-content: center;
@@ -172,12 +174,12 @@
     }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (min-width: 768px) and (max-width: 1200px) {
     .about__box-text {
         margin-left: 32px;
     }
   }
-@media screen and (min-width: 1199px) {
+@media screen and (min-width: 1200px) {
     .about__box-text {
         padding-top: 90px;
         padding-right: 121px;
@@ -201,7 +203,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -55%) scale(1);
+    transform: translate(-50%, -50%) scale(1);
     padding: 20px;
     height: 694px;
     overflow: auto;
@@ -216,13 +218,13 @@
     @include tablet{
         width: 700px;
         height: 480px;
-        transform: translate(-50%, -90%) scale(1);
+        transform: translate(-50%, -50%) scale(1);
     }
 
     @include desktop {
         width: 1060px;    
         height: 600px;
-        transform: translate(-50%, -69%) scale(1);
+        transform: translate(-50%, -50%) scale(1);
     }
 }
   .modal__about-list {
