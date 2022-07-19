@@ -41,6 +41,15 @@ ul {
   margin: 0 auto;
   background: linear-gradient(to bottom, $bgc-body-pink 12%, transparent 12%);
 
+  @media screen and (max-width: 319.98px) {
+    height: 136px;
+    background-image: url(/src/images/gallery-min.png),
+      linear-gradient(to bottom, $bgc-body-pink 12%, transparent 12%);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+  }
+
   @media screen and (min-width: 768px) {
     background: linear-gradient(to bottom, $bgc-body-pink 46%, transparent 46%);
   }
@@ -60,6 +69,10 @@ ul {
   margin-bottom: -2px;
 
   height: 138px;
+
+  @media screen and (max-width: 319.98px) {
+    display: none;
+  }
 
   @media screen and (min-width: 768px) {
     height: 332px;
@@ -106,7 +119,7 @@ img {
     margin-bottom: 8px;
   }
 
-  transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms $function-products;
 
   &:hover,
   &:focus {
@@ -139,5 +152,7 @@ img {
 
   @media screen and (min-width: 768px) {
     border-radius: 20px;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
   }
 }
