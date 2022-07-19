@@ -1,0 +1,150 @@
+.advantages {
+  width: 100%;
+  padding-bottom: 60px;
+  background-color: $bgc-body-pink;
+
+  @include desktop {
+    padding-bottom: 120px;
+  }
+}
+.advantages__box {
+  margin: 0 auto;
+  max-width: 1200px;
+
+  @include tablet {
+    padding-left: 12px;
+  }
+
+  @include desktop {
+    padding-left: -4px;
+  }
+}
+.advantages__title {
+  font-size: 0;
+  margin: 0;
+  padding: 0;
+  visibility: hidden;
+}
+
+.advantages__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+
+  @include tablet {
+    display: flex;
+  }
+}
+
+.advantages__card {
+  max-width: 230px;
+  margin-bottom: 32px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include tablet {
+    max-width: 180px;
+    margin-bottom: 0;
+    margin-right: 4px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  @include desktop {
+    max-width: 288px;
+    margin-bottom: 0;
+    margin-right: 115px;
+  }
+
+  &::before {
+    display: block;
+    margin-bottom: 16px;
+    content: "";
+    height: 50px;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &--cow::before {
+    background-image: url('..//images/cow1x.png');
+  }
+
+  &--аpple::before {
+    background-image: url('..//images/аpple1x.png');
+  }
+
+  &--heart::before {
+    background-image: url('..//images/heart1x.png');
+  }
+}
+
+@media (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .advantages__card--cow::before {
+    background-image: url('..//images/cow2x.png');
+  }
+}
+
+@media (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .advantages__card--аpple::before {
+    background-image: url('..//images/аpple2x.png');
+  }
+}
+
+@media (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .advantages__card--heart::before {
+    background-image: url('..//images/heart2x.png');
+  }
+}
+
+.advantages__item, .weight {
+  font-family: 'Titan One', sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 1.14;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  display: inline;
+
+  color: $accent-color;
+
+  @include tablet {
+    font-size: 48px;
+    text-transform: none;
+  }
+
+  @include desktop {
+    font-size: 58px;
+  }
+}
+
+.advantages__text {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.7;
+
+  color: $primary-color;
+
+  @include tablet {
+    font-size: 14px;
+  }
+
+  @include desktop {
+    font-size: 16px;
+  }
+}

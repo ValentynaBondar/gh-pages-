@@ -1,0 +1,435 @@
+.hero {
+  width: 100%;
+  // height: 502px;
+ 
+  background: $bgc-hero;
+  overflow: hidden;
+  position: relative;
+  @include tablet{
+  
+  }
+
+  &::after{
+    content:'';
+    top:40%;
+    left: 50%;
+    z-index: 0;
+    width: 346px;
+    height: 346px;
+    border-radius: 50%;
+    position: absolute;
+    background: $label-title-color;
+    position: absolute;
+    transform: translate(-37%, -35%);
+    transition: transform rotateZ(20deg) 500ms cubic-bezier( 0.4, 0, 0.2, 1);
+  @include tablet{
+    width: 335px;
+    height: 333px;
+    left: 48%;
+    transform: translate(-35%, -35%);
+  }
+  @include desktop{
+    width: 534px;
+    height: 534px;
+    transform: translate(-20%, -40%);
+  }
+  }
+}
+.hero__girl{
+  img{
+  @include desktop{
+  width: 304px;
+
+}}}
+
+.hero__crem{
+  img{
+    z-index: 0;
+    width: 171px;
+    display:inline-block;
+    position: absolute;
+    transform: translate(-20%, 0);
+    bottom: 0;
+    left: 50%;
+  }
+  @include tablet{
+ 
+  img{
+    width: 143px;
+    transform: translate(-45%, 0);
+  }
+  @include desktop{
+    img{
+      width: 236px;
+   transform: translate(2%);
+
+    
+  }}}
+
+}
+.hero__container{
+ position: relative;
+  z-index: 3;
+  padding-top: 194px;
+  padding-bottom: 158px;
+
+  @include tablet{
+    width: 768px;
+   padding-top: 102px;
+   padding-bottom: 16px; 
+   }
+   @include desktop{
+    width: 1200px;
+    padding-bottom: 60px;
+    padding-top: 147px;
+   }
+}
+
+.hero__button{
+  position: relative;
+  z-index: 3;
+  align-items: center;
+}
+
+.hero__title{
+  padding-left: 20px;
+  // padding-top: 194px;
+ 
+font-family: 'Titan One';
+font-style: normal;
+font-weight: 400;
+font-size: 26px;
+line-height: 1.15;
+letter-spacing: 0.04em;
+text-transform: uppercase;
+
+color: $white-color;
+width: 218px;
+
+margin-bottom: 20px;
+
+
+position: relative;
+ z-index: 3;
+
+ @include tablet{
+ padding-left: 0;
+  font-size: 22px;
+  line-height: 1.13;
+  width: 200px;
+ }
+ @include  desktop{
+  font-size: 38px;
+  line-height: 1.01;
+  width: 277px;
+  margin-bottom: 35px;
+ }
+ 
+  }
+ 
+
+.hero__primary{
+    color:$accent-color;
+    font-size: 48px;
+    @include tablet{
+      line-height: 0.9;
+      font-size: 34px;
+     }
+
+     @include desktop{
+      font-size: 58px;
+      line-height:1.01;
+     }
+  }
+.hero__button{
+  display: flex;
+  padding-left: 20px;
+  @include tablet{
+padding-left: 0;
+margin-bottom: 20px;
+
+  }
+}
+.hero__one{
+font-family: 'DM Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 8px;
+line-height: 1.25;
+display: flex;
+display: inline-block;
+justify-content: center;
+align-items: center;
+text-align: center;
+background:$accent-color;
+border-radius: 20px;
+border: 0px solid transparent;
+
+min-width: 62px;
+min-height: 25.8px;
+margin-right: 9px;
+padding: 8px;
+transition: color 250ms linear, background-color 250ms linear;
+color: $white-color;
+
+@include tablet{
+
+}
+@include desktop{
+  min-height: 40px;
+  min-width: 107px;
+  font-size: 14px;
+  line-height: 1.3;
+  padding: 11 23;
+}
+}
+.hero__one:hover,
+.hero__one:focus{
+  background-color: #ECEBEB;
+  color: $accent-color;
+  transition-duration: 500ms;
+}
+.hero__two{
+  display: inline-block;
+    font-family: 'DM Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 8px;
+line-height: 1.25;
+display: flex;
+align-items: center;
+text-align: center;
+color: $accent-color;
+background: $white-color;
+border-radius: 20px;
+border: 0px solid transparent;
+min-width: 83px;
+height: 25.8px;
+padding-left: 15px;
+transition: color 250ms linear, background-color 250ms linear;
+
+@include desktop{
+  height: 40px;
+  min-width: 138px;
+  font-size: 14px;
+line-height: 1.3;
+padding: 11 23;
+}
+
+}
+.hero__two:hover,
+.hero__two:focus{
+  background-color: #ECEBEB;
+  color: $accent-color;
+ }
+ .hero__couple{
+  @include tablet{
+    display: flex;
+    align-items: center;
+
+  }
+ }
+ .hero__arrow{
+  @media screen and (max-width: 767.98px) {
+    
+    display: none;
+  }
+ }
+ .hero__milk{
+ 
+
+  @media screen and (max-width: 767.98px) {
+    
+    display: none;
+  }
+  @include tablet{
+  
+width: 152px;
+  }
+  @include desktop{
+    width: 213px;
+  }
+ }
+ .hero__girl{
+  @media screen and (max-width: 767.98px){
+    display: none;
+  }
+  @include tablet{
+    position: relative;
+    bottom: 0;
+    right: 0;
+    z-index: 3;
+    display: inline-block;
+    width: 190px;
+    height: 150px;
+    
+      }
+ }
+
+
+.hero__paragraph{
+   font-family: 'DM Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 1.43;
+color: $white-color;
+
+@media screen and (max-width: 767.98px) {
+    display: none;
+}
+  @include tablet {
+    display: inline-block;
+    width: 148px;
+    font-size: 8px;
+    line-height: 1.5;
+  }
+  @include desktop{
+    font-size: 14px;
+    line-height: 1.4;
+    width: 269px;
+  }
+
+}
+.hero__snap{
+  width: 18px;
+  height: 18px;
+    color: #d41443;
+    cursor: pointer;
+    background-color: #fff;
+    border: 0;
+    border-radius: 50%;
+    margin: 0;
+    padding: 0;
+    transition: color .25s linear, background-color .25s linear;
+    position: absolute;
+    bottom: 24px;
+    left: 24%;
+    transform: translate(-134%);
+    @include desktop{
+      width: 26px;
+      height: 26px;
+      transform: translate(-257%);
+    }
+   
+    
+}
+
+.hero__icon{
+  width: 5px;
+  fill:currentColor;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include desktop{
+     width: 8px;
+     transform: translate(-50%, -50%);
+    }
+}
+
+.hero__item{
+    font-family: 'DM Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 1.29;
+text-align: right;
+color: $white-color;
+@media screen and (max-width: 767.98px) {
+  display: none;
+}
+@include tablet{
+  font-size: 8px;
+ 
+}
+@include desktop{
+  font-size: 14px;
+line-height: 1.3;
+}
+}
+
+.hero__class{
+    font-family: 'Titan One';
+font-style: normal;
+font-weight: 400;
+font-size: 46px;
+line-height: 1.15;
+
+text-align: right;
+letter-spacing: 0.04em;
+text-transform: uppercase;
+color: $accent-color;
+@include tablet{
+  font-size: 28px;
+   &::befor{
+    content:'';
+    top:40%;
+    left: 50%;
+    z-index: 0;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    position: absolute;
+    background: #FFFFFF;
+    position: absolute;
+    transform: translate(-50%, 50%);
+    transition: transform rotateZ(20deg) 500ms cubic-bezier( 0.4, 0, 0.2, 1);
+}
+
+@include desktop{
+  font-size: 46px;
+line-height: 1.15;
+}
+}}
+
+.hero__make{
+  @media screen and (min-width: 768px){
+    &::befor{
+      content:'';
+      top:40%;
+      left: 50%;
+      z-index: 0;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      position: absolute;
+      background: #FFFFFF;
+      position: absolute;
+      transform: translate(50%, -50%);
+      transition: transform rotateZ(20deg) 500ms cubic-bezier( 0.4, 0, 0.2, 1);
+    
+  }
+} }
+.hero__right{
+  position: absolute;
+    right: 0;
+    top: 73px;
+    right: 32px;
+}
+.hero__list{
+  margin-bottom: 94px;
+  padding-top: 20px;
+  @include desktop{
+    padding-top: 72px;
+
+  }
+}
+.hero__left{
+  position: relative;
+}
+.hero__girl{
+
+  @media screen  and (max-width: 767.98px){
+    
+    display: none;
+  }
+  @include tablet{
+    width: 190px;
+
+  }
+  @include desktop{
+    width: 304px;
+    bottom: -33px;
+  }
+}

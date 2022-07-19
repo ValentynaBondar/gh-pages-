@@ -1,0 +1,287 @@
+
+.about {
+    background-color: $bgc-body-pink;
+    padding: 60px 0px 40px 0px;
+}
+.about .container {
+    padding-left: 0;
+    padding-right: 0;
+}
+.about__toptext {
+    margin: 0px 0px 15px 0px;
+    color: $label-title-color;
+
+    font-family: 'Titan One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.16;
+    text-align: center;
+    text-transform: uppercase;
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        font-size: 26px;
+        line-height: 1.15;
+  }  
+     @media screen and (min-width: 1200px) {
+         font-size: 30px;
+         line-height: 1.13;
+         letter-spacing: 0.04em;
+  }
+}
+.about__title {
+    text-align: center;
+    color: $accent-color;
+    align-content: center;
+
+    font-family: 'Titan One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 1.14;
+    
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+
+       @media screen and (min-width: 768px) and (max-width: 1199px) {
+        font-size: 48px;
+        line-height: 1.14;
+    }  
+       @media screen and (min-width: 1200px) {
+         font-size: 58px;
+         line-height: 1.13;
+         letter-spacing: 0.06em;
+         margin-bottom: 60px;
+    }
+}
+.about__box {
+    margin-top: 32px;
+
+    @media screen and (min-width: 1199px) {
+    background-image: url(/src/images/milk2x.png);
+    background-repeat: no-repeat;
+    background-position: 0px -20px;
+    background-size: 1200px;
+  }  
+}
+.about__box-text{
+    background-image: url(/src/images/milk1x.png);
+    background-repeat: no-repeat;
+    background-position: 0px 70px;
+    background-size: auto;
+    
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+    background-image:none;
+  }
+}
+
+.about__text-up {
+    margin-bottom: 40px;
+    color: $primary-color; 
+    width: 220px;
+    height: 79px;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.58;
+
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+        font-size: 14px;
+        line-height: 1.78;
+        width: 334px;
+    }
+         @media screen and (min-width: 1199px) {
+        font-size: 16px;
+        line-height: 1.75;
+        width: 463px;
+    } 
+}
+.about__text {
+    margin-bottom: 20px;
+    color: $secondary-color;    
+    width: 220px;
+
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.58;
+
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+        font-size: 14px;
+        line-height: 1.78;
+        width: 334px;
+    }
+        @media screen and (min-width: 1199px) {
+        font-size: 14px;
+        line-height: 1.92;
+        width: 463px;
+        letter-spacing: 0.04em;
+    } 
+}
+.about__btn {
+    background-color: $white-color;
+    border-radius: 22px;
+    border: none;
+    
+    width: 176px;
+    height: 44px;
+    color: $accent-color;
+
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: background-color .25s cubic-bezier(.4, 0, .2, 1), 
+    color .25s cubic-bezier(.4, 0, .2, 1);
+
+    &:hover,
+    &:focus {
+        background-color: $accent-color;
+        color: $white-color;
+        .icon__about {
+            stroke: $white-color;
+        }
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        margin-top: 40px;
+    }
+}
+.icon__about {
+    stroke: $accent-color;
+    transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    margin-left: 13px;   
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .about__box {
+        display: flex;
+        justify-content: space-between;
+    }
+  }
+@media screen and (min-width: 1199px) {
+    .about__box {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .about__box-text {
+        margin-left: 32px;
+    }
+  }
+@media screen and (min-width: 1199px) {
+    .about__box-text {
+        padding-top: 90px;
+        padding-right: 121px;
+        margin-left: 99px;
+    }
+  } 
+  .backdrop__about {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    background-color:  rgba(129, 82, 93, 0.2);
+  }
+  .is-hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+  .modal__about {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -55%) scale(1);
+    padding: 20px;
+    height: 694px;
+    overflow: auto;
+    border-radius: 20px;
+    width: calc(100% - 40px);
+    background-color: $white-color;
+
+    @include mobile{
+        width: 300px;
+    }
+
+    @include tablet{
+        width: 700px;
+        height: 480px;
+        transform: translate(-50%, -90%) scale(1);
+    }
+
+    @include desktop {
+        width: 1060px;    
+        height: 600px;
+        transform: translate(-50%, -69%) scale(1);
+    }
+}
+  .modal__about-list {
+    text-align: center;
+  }
+  .modal__about-item {
+    margin-bottom: 30px;
+    background-image: url(/src/images/milk1x.png);
+    background-position: 5px 30px;
+    background-size: 260px;
+    background-repeat: no-repeat;
+
+     @include tablet {
+        background-image: none;
+     }
+  }
+  .modal__about-title {
+    font-family: 'Titan One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.53;
+    color: $label-title-color;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    margin-bottom: 10px;
+  }
+  .modal__about-text {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.58;
+    color: $primary-color;
+
+    text-align: center;
+  } 
+  .modal__about-close {
+    cursor: pointer;
+    display: flex;
+    width: 25px;
+    height: 25px;
+    margin-left: auto;
+    margin-bottom: 10px;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid $label-title-color;
+    background: transparent;
+    outline: transparent;
+    stroke: $label-title-color;
+    
+    transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover, &:focus {
+        border-color: $accent-color;
+        stroke: $accent-color;
+    }
+}
+.no-scroll{
+    overflow: hidden;
+}

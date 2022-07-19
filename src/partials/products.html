@@ -1,0 +1,184 @@
+<section class="prodacts" id="products">
+  <div class="container">
+    <p class="prodacts__text">100% natural</p>
+    <h2 class="prodacts__title">products</h2>
+    <ul class="product-card">
+      <li class="product-card__item product-card__item--cream">
+        <h3 class="product-card__title">ice cream</h3>
+
+        <p class="product-card__text">
+          Whether you like yours smooth and creamy, sweet and tangy or fruity
+          and frosty, there is an ice cream variety for every taste.
+        </p>
+        <div class="product-card__thumb">
+          <div class="product-card__overlay product-card__overlay--cream">
+            <h3 class="product-card__title-price">price</h3>
+            <ul class="product-card__item-price">
+              <li>Kulfi - 6$</li>
+              <li>Sherbet - 5$</li>
+              <li>Frozen Yogurt - 7$</li>
+              <li>Soft Serve - 8$</li>
+              <li>Gelato - 6$</li>
+              <li>Vanilla - 8$</li>
+              <li>Sorbet - 6$</li>
+            </ul>
+          </div>
+        </div>
+        <button
+          class="button-product button-product--cream"
+          type="button"
+          data-modal-cream-open
+        >
+          <svg class="button-product__icon" width="20px" height="20px">
+            <use href="./images/symbol-products.svg#icon-arrow-right"></use>
+          </svg>
+        </button>
+      </li>
+      <li class="product-card__item product-card__item--coffee">
+        <h3 class="product-card__title">ice coffee</h3>
+
+        <p class="product-card__text">
+          First of all, the cup must be heated. Pour finely ground coffee into a
+          cup. Pour coffee with hot water at a t - of 96-98C.
+        </p>
+        <div class="product-card__thumb">
+          <div class="product-card__overlay product-card__overlay--coffee">
+            <h3 class="product-card__title-price">price</h3>
+            <ul class="product-card__item-price">
+              <li>Cappuccino - 3$</li>
+              <li>Cortado - 4$</li>
+              <li>Latte - 3$</li>
+              <li>Red Eye - 4$</li>
+              <li>Mocha - 3$</li>
+              <li>Raf - 3$</li>
+              <li>Nitro - 4$</li>
+            </ul>
+          </div>
+        </div>
+        <button
+          class="button-product button-product--coffee"
+          type="button"
+          data-modal-coffee-open
+        >
+          <svg class="button-product__icon" width="20px" height="20px">
+            <use href="./images/symbol-products.svg#icon-arrow-right"></use>
+          </svg>
+        </button>
+      </li>
+      <li class="product-card__item product-card__item--milkshakes">
+        <h3 class="product-card__title">milkshakes</h3>
+        <p class="product-card__text">
+          To make 1 milkshake, place 4 scoops vanilla ice-cream and 1/2 cup milk
+          in a blender. Blend until thick and smooth.
+        </p>
+        <div class="product-card__thumb">
+          <div class="product-card__overlay product-card__overlay--milkshakes">
+            <h3 class="product-card__title-price">price</h3>
+            <ul class="product-card__item-price">
+              <li>Vanilla special - 6$</li>
+              <li>Apple pie puff - 9$</li>
+              <li>Neapolitan - 7$</li>
+              <li>Pina colada - 6$</li>
+              <li>Cool mint - 8$</li>
+              <li>Choc malt - 7$</li>
+              <li>Cheesecake - 8$</li>
+            </ul>
+          </div>
+        </div>
+        <button
+          class="button-product button-product--milkshakes"
+          type="button"
+          data-modal-milkshakes-open
+        >
+          <svg class="button-product__icon" width="20px" height="20px">
+            <use href="./images/symbol-products.svg#icon-arrow-right"></use>
+          </svg>
+        </button>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- modal -->
+<div class="backdrop is-hidden backdrop--cream" data-modal-cream>
+  <div class="modal modal--card-cream">
+    <button
+      type="button"
+      class="modal__close modal__close--prodact modal__close--prodact-cream"
+      data-modal-cream-close
+    >
+      <svg class="modal__icon" width="14" height="14">
+        <use href="./images/icon.svg#icon-close-btn"></use>
+      </svg>
+    </button>
+    <h3 class="product-card__title-price product-card__title-price--modal">
+      price
+    </h3>
+    <ul class="product-card__item-price product-card__item-price--modal">
+      <li>Kulfi - 6$</li>
+      <li>Sherbet - 5$</li>
+      <li>Frozen Yogurt - 7$</li>
+      <li>Soft Serve - 8$</li>
+      <li>Gelato - 6$</li>
+      <li>Vanilla - 8$</li>
+      <li>Sorbet - 6$</li>
+    </ul>
+    <p class="product-card__text-price">Made with love!</p>
+  </div>
+</div>
+
+<div class="backdrop is-hidden backdrop--coffee" data-modal-coffee>
+  <div class="modal modal--card-coffee">
+    <button
+      type="button"
+      class="modal__close modal__close--prodact modal__close--prodact-coffee"
+      data-modal-coffee-close
+    >
+      <svg class="modal__icon" width="14" height="14">
+        <use href="./images/icon.svg#icon-close-btn"></use>
+      </svg>
+    </button>
+    <h3 class="product-card__title-price product-card__title-price--modal">
+      price
+    </h3>
+    <ul class="product-card__item-price product-card__item-price--modal">
+      <li>Cappuccino - 3$</li>
+      <li>Cortado - 4$</li>
+      <li>Latte - 3$</li>
+      <li>Red Eye - 4$</li>
+      <li>Mocha - 3$</li>
+      <li>Raf - 3$</li>
+      <li>Nitro - 4$</li>
+    </ul>
+    <p class="product-card__text-price">Made with love!</p>
+  </div>
+</div>
+
+<div class="backdrop is-hidden backdrop--milkshakes" data-modal-milkshakes>
+  <div class="modal modal--card-milkshakes">
+    <button
+      type="button"
+      class="modal__close modal__close--prodact modal__close--prodact-milkshakes"
+      data-modal-milkshakes-close
+    >
+      <svg class="modal__icon" width="14" height="14">
+        <use href="./images/icon.svg#icon-close-btn"></use>
+      </svg>
+    </button>
+    <h3 class="product-card__title-price product-card__title-price--modal">
+      price
+    </h3>
+    <ul class="product-card__item-price product-card__item-price--modal">
+      <li>Vanilla special - 6$</li>
+      <li>Apple pie puff - 9$</li>
+      <li>Neapolitan - 7$</li>
+      <li>Pina colada - 6$</li>
+      <li>Cool mint - 8$</li>
+      <li>Choc malt - 7$</li>
+      <li>Cheesecake - 8$</li>
+    </ul>
+    <p class="product-card__text-price">Made with love!</p>
+  </div>
+</div>
+
+<script src="./js/products-modal.js"></script>
