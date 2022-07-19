@@ -741,11 +741,14 @@
 }
 
 .backdrop.backdrop--cream {
-  background-color: rgb(196, 85, 85);
+  background-color: $bgc-products-bd-1;
 }
 .backdrop.backdrop--coffee {
-  background-color: rgb(132, 101, 44);
+  background-color: $bgc-products-bd-2;
 }
 .backdrop.backdrop--milkshakes {
-  background-color: rgb(67, 109, 61);
+  background-color: $bgc-products-bd-3;
+}
+.modal__icon {
+  z-index: 4;
 }
