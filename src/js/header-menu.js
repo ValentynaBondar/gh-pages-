@@ -4,10 +4,12 @@
     closeModalMenu: document.querySelector('.mob-menu__btn-close'),
     menu: document.querySelector('.mob-menu'),
     body: document.querySelector('body'),
+    list: document.querySelector('.mob-menu__list'),
   };
 
   refs.openModalMenu.addEventListener('click', toggleMenu);
   refs.closeModalMenu.addEventListener('click', toggleMenu);
+  refs.list.addEventListener('click', toggleMenu);
 
   function toggleMenu() {
     refs.menu.classList.toggle('is-hidden');
