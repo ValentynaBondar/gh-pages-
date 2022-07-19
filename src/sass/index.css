@@ -1543,6 +1543,22 @@ button {
   stroke: #b1d285;
 }
 
+.backdrop.backdrop--cream {
+  background-color: rgb(196, 85, 85);
+}
+
+.backdrop.backdrop--coffee {
+  background-color: rgb(132, 101, 44);
+}
+
+.backdrop.backdrop--milkshakes {
+  background-color: rgb(67, 109, 61);
+}
+
+.modal__icon {
+  z-index: 4;
+}
+
 .about {
   background-color: #fff5f6;
   padding-top: 60px;
@@ -1604,7 +1620,7 @@ button {
 .about__box {
   margin-top: 32px;
 }
-@media screen and (min-width: 1199px) {
+@media screen and (min-width: 1200px) {
   .about__box {
     background-image: url(/src/images/milk2x.png);
     background-repeat: no-repeat;
@@ -1720,7 +1736,7 @@ button {
     justify-content: space-between;
   }
 }
-@media screen and (min-width: 1199px) {
+@media screen and (min-width: 1200px) {
   .about__box {
     display: flex;
     justify-content: center;
@@ -1757,7 +1773,7 @@ button {
 .modal__about {
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 55%;
   transform: translate(-55%, -50%) scale(1);
   padding: 10px;
   overflow: auto;
@@ -1773,6 +1789,8 @@ button {
 @media screen and (min-width: 768px) {
   .modal__about {
     width: 670px;
+    top: 50%;
+    left: 50%;
     padding: 20px;
     transform: translate(-50%, -50%) scale(1);
   }
@@ -1782,23 +1800,6 @@ button {
     width: 970px;
     transform: translate(-50%, -50%) scale(1);
     padding-top: 20px;
-  }
-}
-
-.modal__about-list {
-  text-align: center;
-}
-
-.modal__about-item {
-  margin-bottom: 30px;
-  background-image: url(/src/images/milk1x.png);
-  background-position: 5px 30px;
-  background-size: 260px;
-  background-repeat: no-repeat;
-}
-@media screen and (min-width: 768px) {
-  .modal__about-item {
-    background-image: none;
   }
 }
 
@@ -1826,22 +1827,13 @@ button {
   }
 }
 
-.modal__about-text {
-  font-family: "DM Sans";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.58;
-  color: #000000;
-  text-align: center;
-}
-
 .modal__about-close {
   cursor: pointer;
   display: flex;
   width: 25px;
   height: 25px;
   margin-left: auto;
+  z-index: 9;
   align-items: center;
   border-radius: 50%;
   border: 1px solid #d41443;
@@ -1862,10 +1854,11 @@ button {
 
 .about-modal__video-wrap {
   position: relative;
-  padding-bottom: 56.25%; /* задаёт высоту контейнера для 16:9 (если 4:3 — поставьте 75%) */
+  padding-bottom: 56.25%;
   height: 0;
   overflow: hidden;
 }
+
 .about-modal__video {
   position: absolute;
   top: 0;
@@ -1876,6 +1869,7 @@ button {
   outline-width: 0;
   border-radius: 10px;
 }
+
 .advantages {
   width: 100%;
   padding-bottom: 60px;
@@ -2384,11 +2378,10 @@ img {
 .contact__section {
   background: linear-gradient(#ffffff 10%, 20%, #fff5f6);
   padding-bottom: 40px;
-  padding-top: 20px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .contact__section {
-    padding-top: 40px;
+    padding-bottom: 120px;
   }
 }
 
@@ -2414,6 +2407,11 @@ img {
   display: block;
   padding-bottom: 24px;
   border-bottom: 1px solid #e1e1e1;
+}
+@media screen and (min-width: 768px) {
+  .contact__card--location {
+    padding-bottom: 32px;
+  }
 }
 
 .type {
@@ -2503,7 +2501,6 @@ img {
   .description {
     font-size: 14px;
     line-height: 1.64285;
-    padding-bottom: 32px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -2740,6 +2737,7 @@ img {
   height: 100%;
   background-color: rgba(129, 82, 93, 0.2);
   opacity: 1;
+  z-index: 1;
   visibility: visible;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -2937,17 +2935,18 @@ footer {
 
 .footer_text-container {
   width: 234px;
-  margin-bottom: 40px;
+  padding-bottom: 40px;
 }
 @media screen and (min-width: 768px) {
   .footer_text-container {
     width: 340px;
+    height: 100%;
   }
 }
 @media screen and (min-width: 1200px) {
   .footer_text-container {
     width: 478px;
-    margin-bottom: 60px;
+    padding-bottom: 60px;
   }
 }
 
@@ -3007,19 +3006,19 @@ footer {
 }
 
 .footer_social-container {
-  margin-bottom: 40px;
+  padding-bottom: 40px;
   text-align: right;
 }
 @media screen and (min-width: 768px) {
   .footer_social-container {
-    margin-bottom: 59px;
-    margin-top: 60px;
+    padding-top: 60px;
+    padding-bottom: 59px;
   }
 }
 @media screen and (min-width: 1200px) {
   .footer_social-container {
-    margin-top: 11px;
-    margin-bottom: 60px;
+    padding-top: 11px;
+    padding-bottom: 60px;
   }
 }
 
@@ -3095,7 +3094,12 @@ footer {
   font-size: 12px;
   line-height: 186%;
   text-decoration: none;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   text-align: right;
+}
+.footer_contact-num:focus, .footer_contact-num:hover {
+  color: rgb(144, 126, 130);
 }
 @media screen and (min-width: 768px) {
   .footer_contact-num {

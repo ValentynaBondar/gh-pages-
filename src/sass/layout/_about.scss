@@ -1,14 +1,10 @@
 
 .about {
     background-color: $bgc-body-pink;
-    // padding: 60px 0px 40px 0px;
     padding-top: 60px;
     padding-bottom: 40px;
 }
-.about .container {
-    // padding-left: 0;
-    // padding-right: 0;
-}
+
 .about__toptext {
     margin: 0px 0px 15px 0px;
     color: $label-title-color;
@@ -24,12 +20,12 @@
     @media screen and (min-width: 768px) and (max-width: 1199.98px) {
         font-size: 26px;
         line-height: 1.15;
-  }  
-     @media screen and (min-width: 1200px) {
-         font-size: 30px;
-         line-height: 1.13;
-         letter-spacing: 0.04em;
-  }
+}  
+    @media screen and (min-width: 1200px) {
+        font-size: 30px;
+        line-height: 1.13;
+        letter-spacing: 0.04em;
+}
 }
 .about__title {
     text-align: center;
@@ -45,26 +41,25 @@
     letter-spacing: 0.04em;
     text-transform: uppercase;
 
-       @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+    @media screen and (min-width: 768px) and (max-width: 1199.98px) {
         font-size: 48px;
         line-height: 1.14;
     }  
-       @media screen and (min-width: 1200px) {
-         font-size: 58px;
-         line-height: 1.13;
-         letter-spacing: 0.06em;
-         margin-bottom: 60px;
+    @media screen and (min-width: 1200px) {
+        font-size: 58px;
+        line-height: 1.13;
+        letter-spacing: 0.06em;
+        margin-bottom: 60px;
     }
 }
 .about__box {
     margin-top: 32px;
-
-    @media screen and (min-width: 1199px) {
+    @media screen and (min-width: 1200px) {
     background-image: url(/src/images/milk2x.png);
     background-repeat: no-repeat;
     background-position: 0px -20px;
     background-size: 1200px;
-  }  
+}  
 }
 .about__box-text{
     background-image: url(/src/images/milk1x.png);
@@ -74,7 +69,7 @@
     
     @media screen and (min-width: 768px) and (max-width: 1199.98px) {
     background-image:none;
-  }
+}
 }
 
 .about__text-up {
@@ -93,7 +88,7 @@
         line-height: 1.78;
         width: 334px;
     }
-         @media screen and (min-width: 1200px) {
+        @media screen and (min-width: 1200px) {
         font-size: 16px;
         line-height: 1.75;
         width: 463px;
@@ -165,8 +160,8 @@
         display: flex;
         justify-content: space-between;
     }
-  }
-@media screen and (min-width: 1199px) {
+}
+@media screen and (min-width: 1200px) {
     .about__box {
         display: flex;
         justify-content: center;
@@ -178,15 +173,15 @@
     .about__box-text {
         margin-left: 32px;
     }
-  }
+}
 @media screen and (min-width: 1200px) {
     .about__box-text {
         padding-top: 90px;
         padding-right: 121px;
         margin-left: 99px;
     }
-  } 
-  .backdrop__about {
+} 
+    .backdrop__about {
     position: fixed;
     top: 0;
     left: 0;
@@ -194,24 +189,20 @@
     height: 100%;
     opacity: 1;
     background-color:  rgba(129, 82, 93, 0.2);
-  }
-  .is-hidden {
+}
+.is-hidden {
     opacity: 0;
     pointer-events: none;
 }
-  .modal__about {
+.modal__about {
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 55%;
     transform: translate(-55%, -50%) scale(1);
-    // padding: 20px;
-    // height: 694px;
     padding: 10px;
-    // height: 220px;
     overflow: auto;
     border-radius: 20px;
     width: calc(100% - 40px);
-    // background-color: $white-color;
     background-color: $label-title-color;
     @include mobile{
         width: 300px;
@@ -219,33 +210,20 @@
 
     @include tablet{
         width: 670px;
-    // height: 440px;
-    padding: 20px;
+        top: 50%;
+        left: 50%;
+        padding: 20px;
         transform: translate(-50%, -50%) scale(1);
     }
 
     @include desktop {
         width: 970px;    
-        // height: 600px;
         transform: translate(-50%, -50%) scale(1);
         padding-top: 20px;
     }
 }
-  .modal__about-list {
-    text-align: center;
-  }
-  .modal__about-item {
-    margin-bottom: 30px;
-    background-image: url(/src/images/milk1x.png);
-    background-position: 5px 30px;
-    background-size: 260px;
-    background-repeat: no-repeat;
 
-     @include tablet {
-        background-image: none;
-     }
-  }
-  .modal__about-title {
+.modal__about-title {
     font-family: 'Titan One';
     font-style: normal;
     font-weight: 400;
@@ -257,34 +235,21 @@
     justify-content: center;
     text-align: center;
     text-transform: uppercase;
-
-    // margin-bottom: 10px;
     @include tablet {
         font-size: 26px;
     }
     @include desktop {
-        // display: none;
         font-size: 30px;
     }
-  }
-  .modal__about-text {
-    font-family: 'DM Sans';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 1.58;
-    color: $primary-color;
+}
 
-    text-align: center;
-  } 
-  .modal__about-close {
+.modal__about-close {
     cursor: pointer;
     display: flex;
     width: 25px;
     height: 25px;
     margin-left: auto;
-    // margin-right: 20px;
-    // margin-bottom: 10px;
+    z-index: 9;
     align-items: center;
     border-radius: 50%;
     border: 1px solid $accent-color;
@@ -299,64 +264,27 @@
         stroke: $accent-color;
     }
     @include desktop {
-        // margin-bottom: 20px;
+
     }
 }
 .no-scroll{
     overflow: hidden;
 }
 
-
-
 .about-modal__video-wrap {
-    // position: absolute;
-    // bottom: 5%;
-    // padding-right: 15px;
-    // padding-left: 15px;
     position: relative;
-  padding-bottom: 56.25%; /* задаёт высоту контейнера для 16:9 (если 4:3 — поставьте 75%) */
-  height: 0;
-  overflow: hidden;
-
-    @include tablet {
-        // width: 100%;
-        // width: 660px;
-    }
-    @include desktop {
-        // width: 960px;
-    //   position: static;
-    //   bottom: 10%;
-    //   padding-right: 0px;
-    //   padding-left: 0px;
-    }
-  }
+    padding-bottom: 56.25%; 
+    height: 0;
+    overflow: hidden;
+}
 
 .about-modal__video {
-    // width: 100%;
-    // height: 100%;
-    // border-radius: 10px;
     position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-width: 0;
-  outline-width: 0;
-  border-radius: 10px;
-    // margin-left: auto;
-    // margin-right: auto;
-    // display: flex;
-    // width: 260px;
-    // height: 160px;
-    @include tablet {
-        // width: 650px;
-    // height: 360px;
-    }
-    @include desktop {
-    //   width: 750px;
-    // height: 520px;
-    // padding-left: 20px;
-    // width: 950px;
-    // height: 500px;
-    }
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-width: 0;
+    outline-width: 0;
+    border-radius: 10px;
 }
