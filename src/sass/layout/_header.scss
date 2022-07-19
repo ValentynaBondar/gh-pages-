@@ -3,7 +3,11 @@
   width: 100%;
   padding-top: 8px;
 
-  z-index: 10;
+  z-index: 5;
+
+
+
+
   @include tablet {
     padding-top: 32px;
   }
@@ -16,6 +20,9 @@
 .header-container {
   display: flex;
   align-items: center;
+  @media screen and (max-width: 767.98px) {
+    width: 320px;
+  }
 }
 .nav {
   display: flex;
