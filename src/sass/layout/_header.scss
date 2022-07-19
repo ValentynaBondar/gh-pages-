@@ -121,6 +121,7 @@
   }
   @include tablet {
     width: calc(100% - 485px);
+    max-width: 500px;
   }
 }
 
@@ -171,7 +172,23 @@
   padding-bottom: 14px;
 }
 
-.mob-menu__link,
+.mob-menu__link {
+  display: flex;
+  cursor: pointer;
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.28;
+  text-decoration: none;
+  color: #ffffff;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    color: #d41443;
+  }
+}
+
 .nav__link {
   display: flex;
   cursor: pointer;
@@ -179,6 +196,8 @@
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   line-height: 1.28;
   text-decoration: none;
   color: #ffffff;
@@ -220,6 +239,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
+  z-index: 11;
   transform: translate(-50%, -50%);
   @include tablet {
     width: 380px;
@@ -344,16 +364,16 @@
   }
 }
 
-// .header-modal::-webkit-scrollbar {
-//   width: 8px;
-// }
+.header-modal::-webkit-scrollbar {
+  width: 8px;
+}
 
-// .header-modal::-webkit-scrollbar-track {
-//   background-color: #544d4daf;
-// }
+.header-modal::-webkit-scrollbar-track {
+  background-color: #544d4daf;
+}
 
-// .header-modal::-webkit-scrollbar-thumb {
-//   background-color: #d41443;
-//   border-radius: 4px;
-//   border: 2px solid #544d4daf;
-// }
+.header-modal::-webkit-scrollbar-thumb {
+  background-color: #d41443;
+  border-radius: 4px;
+  border: 2px solid #544d4daf;
+}
