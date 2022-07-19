@@ -28,11 +28,9 @@
 .contact__section{
     background: linear-gradient($bgc-body 10%, 20%, $bgc-body-pink);
     padding-bottom: 40px;
-    padding-top: 20px;
 
-    @include tablet{
-        padding-top: 40px;
-        
+    @include desktop{
+        padding-bottom: 120px;
     }
 }
 
