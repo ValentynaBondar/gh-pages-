@@ -3,7 +3,11 @@
   width: 100%;
   padding-top: 8px;
 
-  z-index: 10;
+  z-index: 5;
+
+
+
+
   @include tablet {
     padding-top: 32px;
   }
@@ -16,6 +20,9 @@
 .header-container {
   display: flex;
   align-items: center;
+  @media screen and (max-width: 767.98px) {
+    width: 320px;
+  }
 }
 .nav {
   display: flex;
@@ -232,6 +239,7 @@
 .header-modal {
   width: 96%;
   height: 550px;
+  max-width: 380px;
   background-color: #ffb8ca;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -243,9 +251,6 @@
   left: 50%;
   z-index: 11;
   transform: translate(-50%, -50%);
-  @include tablet {
-    width: 380px;
-  }
 }
 
 .header-modal__btn-close {

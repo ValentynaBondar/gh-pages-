@@ -42,6 +42,7 @@
 
 }}}
 
+
 .hero__crem{
   img{
     z-index: 0;
@@ -73,6 +74,9 @@
   padding-top: 194px;
   padding-bottom: 158px;
 
+  @media screen and (max-width: 767.98px) {
+    width: 320px;
+  } 
   @include tablet{
     width: 768px;
    padding-top: 102px;
@@ -111,6 +115,7 @@ margin-bottom: 20px;
 
 position: relative;
  z-index: 3;
+ 
 
  @include tablet{
  padding-left: 0;
@@ -126,6 +131,7 @@ position: relative;
  }
  
   }
+  
  
 
 .hero__primary{
@@ -287,7 +293,7 @@ color: $white-color;
   @include desktop{
     font-size: 14px;
     line-height: 1.4;
-    width: 269px;
+    width: 200px;
   }
 
 }
@@ -362,10 +368,10 @@ text-transform: uppercase;
 color: $accent-color;
 @include tablet{
   font-size: 28px;
-   &::befor{
+   &::after{
     content:'';
-    top:40%;
-    left: 50%;
+    top:0%;
+    right: 0;
     z-index: 0;
     width: 16px;
     height: 16px;
@@ -373,22 +379,45 @@ color: $accent-color;
     position: absolute;
     background: #FFFFFF;
     position: absolute;
-    transform: translate(-50%, 50%);
+    transform: translate(44%, 474%);
+    z-index: -1;
+
     transition: transform rotateZ(20deg) 500ms cubic-bezier( 0.4, 0, 0.2, 1);
-}
+
+    @include desktop{
+      width: 30px;
+      height: 30px;
+      transform: translate(49%, 510%);
+    }
+    @include desktop{
+
+    }
+  }
 
 @include desktop{
   font-size: 46px;
 line-height: 1.15;
 }
 }}
+.hero__list-group{
+  @include desktop{
+  
+  }
+}
+.hero__bottom{
+  margin-bottom: 79px;
+ 
+  @include desktop  {
+   
+  }
+}
 
 .hero__make{
-  @media screen and (min-width: 768px){
-    &::befor{
+  @include tablet {
+    &::after{
       content:'';
-      top:40%;
-      left: 50%;
+      top:0%;
+      right: 0%;
       z-index: 0;
       width: 16px;
       height: 16px;
@@ -396,9 +425,14 @@ line-height: 1.15;
       position: absolute;
       background: #FFFFFF;
       position: absolute;
-      transform: translate(50%, -50%);
+      transform: translate(46%, 107%);
       transition: transform rotateZ(20deg) 500ms cubic-bezier( 0.4, 0, 0.2, 1);
-    
+    z-index: -1;
+      @include desktop{
+      width: 30px;
+      height: 30px;
+      transform: translate(46%, 211%);
+    }
   }
 } }
 .hero__right{
@@ -408,7 +442,8 @@ line-height: 1.15;
     right: 32px;
 }
 .hero__list{
-  margin-bottom: 94px;
+  margin-bottom: 15px;
+ 
   padding-top: 20px;
   @include desktop{
     padding-top: 72px;
@@ -432,4 +467,7 @@ line-height: 1.15;
     width: 304px;
     bottom: -33px;
   }
+}
+#more{
+  display: none;
 }
