@@ -541,6 +541,11 @@ button {
   padding-top: 194px;
   padding-bottom: 158px;
 }
+@media screen and (max-width: 767.98px) {
+  .hero__container {
+    width: 320px;
+  }
+}
 @media screen and (min-width: 768px) {
   .hero__container {
     width: 768px;
@@ -766,7 +771,7 @@ button {
   .hero__paragraph {
     font-size: 14px;
     line-height: 1.4;
-    width: 269px;
+    width: 200px;
   }
 }
 
@@ -850,10 +855,10 @@ button {
   .hero__class {
     font-size: 28px;
   }
-  .hero__class::befor {
+  .hero__class::after {
     content: "";
-    top: 40%;
-    left: 50%;
+    top: 0%;
+    right: 0;
     z-index: 0;
     width: 16px;
     height: 16px;
@@ -861,8 +866,16 @@ button {
     position: absolute;
     background: #FFFFFF;
     position: absolute;
-    transform: translate(-50%, 50%);
+    transform: translate(44%, 474%);
+    z-index: -1;
     transition: transform rotateZ(20deg) 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1200px) {
+  .hero__class::after {
+    width: 30px;
+    height: 30px;
+    transform: translate(49%, 510%);
   }
 }
 @media screen and (min-width: 768px) and (min-width: 1200px) {
@@ -872,11 +885,14 @@ button {
   }
 }
 
+.hero__bottom {
+  margin-bottom: 79px;
+}
 @media screen and (min-width: 768px) {
-  .hero__make::befor {
+  .hero__make::after {
     content: "";
-    top: 40%;
-    left: 50%;
+    top: 0%;
+    right: 0%;
     z-index: 0;
     width: 16px;
     height: 16px;
@@ -884,8 +900,16 @@ button {
     position: absolute;
     background: #FFFFFF;
     position: absolute;
-    transform: translate(50%, -50%);
+    transform: translate(46%, 107%);
     transition: transform rotateZ(20deg) 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: -1;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1200px) {
+  .hero__make::after {
+    width: 30px;
+    height: 30px;
+    transform: translate(46%, 211%);
   }
 }
 
@@ -897,7 +921,7 @@ button {
 }
 
 .hero__list {
-  margin-bottom: 94px;
+  margin-bottom: 15px;
   padding-top: 20px;
 }
 @media screen and (min-width: 1200px) {
@@ -925,6 +949,10 @@ button {
     width: 304px;
     bottom: -33px;
   }
+}
+
+#more {
+  display: none;
 }
 
 .prodacts {
@@ -1577,7 +1605,7 @@ button {
   z-index: 4;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 767.98px) {
   .about__milk {
     background-image: url(/src/images/about/aboutmilk.png);
     background-size: 100% auto;
